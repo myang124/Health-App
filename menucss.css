@@ -1,0 +1,14 @@
+button{
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    display: block;
+}
+
+section{
+    border: 10px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
