@@ -1,8 +1,11 @@
-button{
+
+/* for the menu buttons */
+.container button{
     font-size: 40px;
     padding: 10px;
     border-radius: 10px;
     margin: 20px;
+    width: 100%;
     display: block;
 }
 
@@ -11,4 +14,16 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* for the adding workout page */
+.workout_buttons{
+    text-align: center;
+}
+.workout_buttons #body_part{
+    font-size: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
 }
