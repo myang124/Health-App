@@ -1,4 +1,5 @@
 
+//used to see if its the users first time opening app
 console.log(window.localStorage.getItem("first time"));
 
 if(window.localStorage.getItem("first time") != 1){

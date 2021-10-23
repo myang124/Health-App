@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#">      
+        <link rel = "stylesheet" href = "workout_plancss.css">
+        <script src = "workout-planjs.js"></script>
+    </head>
+    <body>
+        <h1 style = "text-align: center;">Select Body Part to Workout</h1>
+        <div class = "workout_buttons">
+            <a href = "#upper_body">
+                <button id = "body_part"> Upper body </button>
+            </a>
+            <a href = "#lower_body">
+                <button id = "body_part"> Lower body </button>
+            </a>
+            <a href = "#core">
+                <button id = "body_part"> Core </button>
+            </a>
+            <a href = "#cardio">
+                <button id = "body_part"> Cardio </button>
+            </a>
+        </div>
+        <section id = "upper_body">
+            <div id = "add_button">
+                <button id = "add_txt" onclick="addWorkout()">ADD</button>
+            </div>
+            <div class = "search-box">
+                <input type = "text" placeholder="type..."/>
+            </div>
+            <div>
+                <select id = "selected_workout"> 
+                    <!--<option value = "default" disabled selected value> -- select an option -- </option>-->
+                    <option value = "default"> -- select an option -- </option> 
+                    <option>A</option>
+                    <option>b</option>
+                    <option>c</option>
+                    <option>d</option>
+                    <option>e</option>
+                </select>
+            </div>
+        </section>
+        <section id = "lower_body">
+            test2
+        </section>
+        <section id = "core">
+            test3
+        </section>
+        <section id = "cardio">
+            test4
+        </section>
+    </body>
+</html>

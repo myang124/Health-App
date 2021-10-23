@@ -1,5 +1,7 @@
 
 /* for the menu buttons */
+
+
 .container button{
     font-size: 40px;
     padding: 10px;
@@ -9,12 +11,22 @@
     display: block;
 }
 
-section{
+/* these two just fills entire page up*/
+body, html {
+    height:100%;
+}
+
+#menu-buttons{
+    height: 90%;
+}
+
+section {
     border: 10px solid gray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 
 /* for the adding workout page */

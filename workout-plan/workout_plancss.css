@@ -1,0 +1,78 @@
+
+/* for the workout-plan menu buttons */
+.container button{
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 100%;
+    display: block;
+}
+
+#layout{
+    border: 10px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* for the adding workout page */
+.workout_buttons{
+    text-align: center;
+}
+.workout_buttons #body_part{
+    font-size: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* for the add_workout to only display workouts that are clicked */
+section{
+    border: 10px solid gray;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+section:target {
+    display: block;
+    text-align: center;
+  }
+
+/*searching workout*/
+.search-box{
+    text-align: center;
+
+    /*
+    opacity: 0;
+    pointer-events: none;
+    */
+}
+
+.search-box input{
+    width: 50%;
+    font-size:18px;
+    text-align: center;
+}
+select{
+    width: 50%;
+    text-align: center;
+}
+
+
+/*add button in add workout*/
+#add_button{
+    text-align: center;
+} 
+#add_txt{
+  position: fixed;
+  left: 50%;
+  height:50px;
+  width: 20%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+    
