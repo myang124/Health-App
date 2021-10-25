@@ -3,6 +3,7 @@
 <head>
     <link rel="shortcut icon" href="#">                        
     <link rel = "stylesheet" href = "workout_plancss.css">
+    <script src = "workout-planjs.js"></script>
     <title>My Workout Plan</title>
 </head>
 <body>
@@ -16,33 +17,37 @@
                     <th><button>Monday</button></th>
                     <th>
                         <a href = "add_workout.html">
-                            <button id = "add_monday">+</button>
+                            <button  onclick="setDay(this.id)" id = "add_monday">+</button>
                         </a>
                     </th>
                 </tr>
                 <tr>
                     <th><button>Tuesday</button></th>
-                    <th><button id = "add_tuesday">+</button></th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = "add_tuesday">+</button>
+                        </a>
+                    </th>
                 </tr>
                 <tr>
                     <th><button>Wednesday</button></th>
-                    <th><button id = "add_wednesday">+</button></th>
+                    <th><button onclick="setDay(this.id)" id = "add_wednesday">+</button></th>
                 </tr>
                 <tr>
                     <th><button>Thursday</button></th>
-                    <th><button id = "add_thursday">+</button></th>
+                    <th><button onclick="setDay(this.id)" id = "add_thursday">+</button></th>
                 </tr>
                 <tr>
                     <th><button>Friday</button></th>
-                    <th><button id = "add_friday">+</button></th>
+                    <th><button onclick="setDay(this.id)" id = "add_friday">+</button></th>
                 </tr>
                 <tr>
                     <th><button>Saturday</button></th>
-                    <th><button id = add_saturday>+</button></th>
+                    <th><button onclick="setDay(this.id)" id = add_saturday>+</button></th>
                 </tr>
                 <tr>
                     <th><button>Sunday</button></th>
-                    <th><button id = "add_sunday">+</button></th>
+                    <th><button onclick="setDay(this.id)" id = "add_sunday">+</button></th>
                 </tr>
             </table>
         </div>

@@ -21,7 +21,7 @@
 .workout_buttons{
     text-align: center;
 }
-.workout_buttons #body_part{
+.workout_buttons .body_part{
     font-size: 40px;
     margin: 20px;
     border-radius: 10px;
@@ -75,4 +75,12 @@ select{
   transform: translate(-50%, -50%);
   margin: 0 auto;
 }
-    
+
+datalist {
+    display: block;
+}
+
+input{
+    width: 50%;
+    text-align: center;
+}

@@ -6,40 +6,75 @@
         <script src = "workout-planjs.js"></script>
     </head>
     <body>
+        
+        <!--*********************************-->
+        <!--Breaks the body parts in sections-->
+        <!--*********************************-->
         <h1 style = "text-align: center;">Select Body Part to Workout</h1>
         <div class = "workout_buttons">
             <a href = "#upper_body">
-                <button id = "body_part"> Upper body </button>
+                <button class = "body_part" id = "upperbody" onclick = "setBody(this.id)" > Upper body </button>
             </a>
             <a href = "#lower_body">
-                <button id = "body_part"> Lower body </button>
+                <button class = "body_part" id = "lowerbody" onclick = "setBody(this.id)"> Lower body </button>
             </a>
             <a href = "#core">
-                <button id = "body_part"> Core </button>
+                <button class = "body_part" id = "core" onclick = "setBody(this.id)"> Core </button>
             </a>
             <a href = "#cardio">
-                <button id = "body_part"> Cardio </button>
+                <button class = "body_part" id = "cardio" onclick = "setBody(this.id)"> Cardio </button>
+            </a>
+
+            <a href = "#my">
+                <button class = "body_part" id = "My" onclick = "setBody(this.id)">My</button>
             </a>
         </div>
+
+        <!--**********************-->
+        <!--section for upper body-->
+        <!--**********************-->
         <section id = "upper_body">
             <div id = "add_button">
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
-            <div class = "search-box">
-                <input type = "text" placeholder="type..."/>
-            </div>
-            <div>
-                <select id = "selected_workout"> 
-                    <!--<option value = "default" disabled selected value> -- select an option -- </option>-->
-                    <option value = "default"> -- select an option -- </option> 
-                    <option>A</option>
-                    <option>b</option>
-                    <option>c</option>
-                    <option>d</option>
-                    <option>e</option>
+
+            <input oninput="changeSelectText()" list = "upper_body_workouts" id = "workouts" name = "ubw" value ="Pushup"/>
+
+            <datalist id = "upper_body_workouts">
+                <select id = "selected_val"> 
+                    <option onclick="changeInputText()" value = "Pushup">Pushup</option>
+                    <option onclick="changeInputText()" value = "Bench press">Bench press</option>
+                    <option onclick="changeInputText()" value = "Overhead press">Overhead press</option>
+                    <option onclick="changeInputText()" value = "Incline bench press">Incline bench press</option>
+                    <option onclick="changeInputText()" value = "Bentover row">Bentover row</option>
+                    <option onclick="changeInputText()" value = "Pullup">Pullup</option>
+                    <option onclick="changeInputText()" value = "Dumbbell curl">Dumbbell curl</option>
+                    <option onclick="changeInputText()" value = "Hammer curl">Hammer curl</option>
+                    <option onclick="changeInputText()" value = "Triceps pushdown">Triceps pushdown</option>
+                    <option onclick="changeInputText()" value = "Dip">Dip</option>
+                    <option onclick="changeInputText()" value = "Lying triceps extension">Lying triceps extension</option>
+                    <option onclick="changeInputText()" value = "Lateral raise">Lateral raise</option>
+                    <option onclick="changeInputText()" value = "Bentover lateral raise">Bentover lateral raise</option>
+                    <option onclick="changeInputText()" value = "Face pull">Face pull</option>
+                    <option onclick="changeInputText()" value = "Shrug">Shrug</option>
                 </select>
-            </div>
+            </datalist>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section id = "lower_body">
             test2
         </section>
