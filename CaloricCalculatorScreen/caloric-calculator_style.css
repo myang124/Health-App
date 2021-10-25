@@ -1,0 +1,12 @@
+body {
+    background-color: #60ddf0;
+  }
+
+.titleheading {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+             #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    
+}
