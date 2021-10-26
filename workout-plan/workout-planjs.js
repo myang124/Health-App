@@ -1,17 +1,16 @@
 localStorage['upperbody'] = JSON.stringify(['Pushup', 'Bench press', 'Overhead press', 'Incline bench press', 'Bentover row', 'Pullup',
-'Dumbbell curl', 'Hammer curl', 'Triceps pushdown', 'Dip', 'Lying triceps extension', 
- 'Lateral raise' , 'Bentover lateral raise', 'Face pull', 'Shrug']);
+'Dumbbell curl', 'Hammer curl', 'Triceps pushdown', 'Dip', 'Lying triceps extension', 'Lateral raise' , 'Bentover lateral raise', 'Face pull', 'Shrug']);
+
+ localStorage['lowerbody'] = JSON.stringify(['Dumbbell squat','Dumbbell goblet squat','Bulgarian split squat','side lunge','Glute bridge',
+                                             'Forward lunge','Step-ups','Side leg lift with band','Jumping jacks','Dead lifts','Calf raises']);
 
  var upperbodylist = JSON.parse(localStorage['upperbody']);
+ var lowerbodylist = JSON.parse(localStorage['lowerbody']);
  //localStorage.clear();
 
 
 //adds the workout when ADD is clicked
 function addWorkout(){
-
-    //string that is in the input field
-    var workout = document.getElementById("workouts");
-    var workoutToStr = workout.value;
     
     var bodypart = localStorage.getItem("body_part");
     //first check if workout is in the list
@@ -19,7 +18,31 @@ function addWorkout(){
     //dis is .... wack
     // local storage doesnt have lists, so have to use JSON parsing
     if(bodypart == "upperbody"){
+        //string that is in the input field
+        var workout = document.getElementById("workoutUP");
+        var workoutToStr = workout.value;
+
         var inList = upperbodychecklist(workoutToStr);     
+        if(inList === true){
+            if(localStorage.getItem(localStorage.getItem("day")) == null){
+                var list = [workoutToStr];
+                localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+            } else {
+                var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+                list.push(workoutToStr);
+                localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+            }
+            console.log(localStorage.getItem(localStorage.getItem("day")));
+        } else {
+            alert("This workout is not in the list.");
+        }
+    } 
+
+    if(bodypart == "lowerbody"){
+        var workout = document.getElementById("workoutLO");
+        var workoutToStr = workout.value;
+
+        var inList = lowerbodychecklist(workoutToStr);  
         if(inList === true){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
@@ -34,18 +57,31 @@ function addWorkout(){
         } else {
             alert("This workout is not in the list.");
         }
-    } 
+    }
 }
 
 //updates the textfeild when a dropdown is clicked
-function changeInputText(){
-    var temp = document.getElementById("workouts");
-    temp.value = document.getElementById("selected_val").value;
+function changeInputText(id){
+    var temp;
+    if(id == "upper"){
+        temp = document.getElementsByClassName("workouts")[0];
+        temp.value = document.getElementById("selected_val_up").value;
+    } else if (id == "lower"){
+        temp = document.getElementsByClassName("workouts")[1];
+        temp.value = document.getElementById("selected_val_lo").value;
+    }
 }
 
-function changeSelectText(){
-    var temp = document.getElementById("selected_val");
-    temp.value = document.getElementById("workouts").value;
+//updates slect on text input
+function changeSelectText(id){
+    if(id == "workoutUP"){
+        var temp = document.getElementById("selected_val_up");
+        temp.value = document.getElementsByClassName("workouts")[0].value;
+    }
+    else if(id == "workoutLO"){
+        var temp = document.getElementById("selected_val_lo");
+        temp.value = document.getElementsByClassName("workouts")[1].value;
+    } 
 }
 
 //checks if user input text is part of the lists of workouts
@@ -53,6 +89,16 @@ function upperbodychecklist(workoutToStr){
 
     for(var index = 0; index < upperbodylist.length; index++){
         if(upperbodylist[index].toLowerCase() == workoutToStr.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
+}
+
+function lowerbodychecklist(workoutToStr){
+    console.log(workoutToStr);
+    for(var index = 0; index < lowerbodylist.length; index++){
+        if(lowerbodylist[index].toLowerCase() == workoutToStr.toLowerCase()){
             return true;
         }
     }

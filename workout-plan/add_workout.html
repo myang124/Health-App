@@ -38,25 +38,55 @@
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
 
-            <input oninput="changeSelectText()" list = "upper_body_workouts" id = "workouts" name = "ubw" value ="Pushup"/>
+            <input oninput="changeSelectText(this.id)" list = "upper_body_workouts" class = "workouts" id = "workoutUP" name = "ubw" value ="Pushup"/>
 
             <datalist id = "upper_body_workouts">
-                <select id = "selected_val"> 
-                    <option onclick="changeInputText()" value = "Pushup">Pushup</option>
-                    <option onclick="changeInputText()" value = "Bench press">Bench press</option>
-                    <option onclick="changeInputText()" value = "Overhead press">Overhead press</option>
-                    <option onclick="changeInputText()" value = "Incline bench press">Incline bench press</option>
-                    <option onclick="changeInputText()" value = "Bentover row">Bentover row</option>
-                    <option onclick="changeInputText()" value = "Pullup">Pullup</option>
-                    <option onclick="changeInputText()" value = "Dumbbell curl">Dumbbell curl</option>
-                    <option onclick="changeInputText()" value = "Hammer curl">Hammer curl</option>
-                    <option onclick="changeInputText()" value = "Triceps pushdown">Triceps pushdown</option>
-                    <option onclick="changeInputText()" value = "Dip">Dip</option>
-                    <option onclick="changeInputText()" value = "Lying triceps extension">Lying triceps extension</option>
-                    <option onclick="changeInputText()" value = "Lateral raise">Lateral raise</option>
-                    <option onclick="changeInputText()" value = "Bentover lateral raise">Bentover lateral raise</option>
-                    <option onclick="changeInputText()" value = "Face pull">Face pull</option>
-                    <option onclick="changeInputText()" value = "Shrug">Shrug</option>
+                <select id = "selected_val_up"> 
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pushup">Pushup</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bench press">Bench press</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Overhead press">Overhead press</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Incline bench press">Incline bench press</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover row">Bentover row</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pullup">Pullup</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell curl">Dumbbell curl</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Hammer curl">Hammer curl</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Triceps pushdown">Triceps pushdown</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dip">Dip</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lying triceps extension">Lying triceps extension</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lateral raise">Lateral raise</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover lateral raise">Bentover lateral raise</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Face pull">Face pull</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Shrug">Shrug</option>
+                </select>
+            </datalist>
+        </section>
+
+
+
+        <!--**********************-->
+        <!--Section for lower body-->
+        <!--**********************-->
+
+        <section id = "lower_body">
+            <div id = "add_button">
+                <button id = "add_txt" onclick="addWorkout()">ADD</button>
+            </div>
+
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "lower_body_workouts" id = "workoutLO" name = "lbw" value ="Dumbbell squat"/>
+
+            <datalist id = "lower_body_workouts">
+                <select id = "selected_val_lo">
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Dumbbell squat">Dumbbell squat</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Dumbbell goblet squat">Dumbbell goblet squat</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Bulgarian split squat">Bulgarian split squat</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "side lunge">side lunge</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Glute bridge">Glute bridge</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Forward lunge">Forward lunge</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Step-ups">Step-ups</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Side leg lift with band">Side leg lift with band</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Jumping jacks">Jumping jacks</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Dead lifts">Dead lifts</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Calf raises">Calf raises</option>
                 </select>
             </datalist>
         </section>
@@ -75,9 +105,10 @@
 
 
 
-        <section id = "lower_body">
-            test2
-        </section>
+
+
+
+
         <section id = "core">
             test3
         </section>
