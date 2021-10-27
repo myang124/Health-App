@@ -1,8 +1,6 @@
-body {
-  /*
-    background-color: #60ddf0;
-    */
-  }
+/*
+  Thomas Le
+*/
 
 #entirepage {
     width:450px;
@@ -25,8 +23,8 @@ body {
 
 .userinput {
   font-family: "Open Sans", sans-serif;
-  position: 'relative';
-  margin-top: 400px;
+  margin-top: 300px;
+ 
 }
 
 .userinput fieldset {
@@ -34,6 +32,11 @@ body {
   font-weight: bold;
   border-radius: 15px;
   padding-top: 20px;
+  
+  position: fixed;
+  bottom: 150px;
+  right: 648px;
+  width: 415px;
 }
 
 .userinput input{
@@ -70,7 +73,7 @@ body {
   top:50%;
   left:50%;
   margin-left: -95px;
-  margin-top: 280px;
+  margin-top: 320px;
   width: 130px;
   height: 40px;
   text-align: center;
@@ -85,5 +88,39 @@ body {
   font-size: 15px;
   color: white;
   background-color: #6095f0;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.0.5);
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px auto;
+  background-color:#6095f0;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+  height:350px; 
+  width: 430px;
+  overflow-y:scroll; 
+  display:block;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  padding: 5px;
+}
+
+th {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+td {
+    font-size: 15px;
+    color: white;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
