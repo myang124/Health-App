@@ -60,6 +60,7 @@ select{
     width: 20%;
     text-align: center;
 }
+
 .workouts {
     width: 20%;
 }
@@ -84,6 +85,7 @@ p{
 datalist {
     display: block;
 }
+
 
 input{
     width: 50%;

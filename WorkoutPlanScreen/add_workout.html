@@ -13,19 +13,19 @@
         <h1 style = "text-align: center;">Select Body Part to Workout</h1>
         <div class = "workout_buttons">
             <a href = "#upper_body">
-                <button class = "body_part" id = "upperbody" onclick = "setBody(this.id)" > Upper body </button>
+                <button class = "body_part" id = "upperbody" onclick = "setBody(this.id);setClickedFalse();" > Upper body </button>
             </a>
             <a href = "#lower_body">
-                <button class = "body_part" id = "lowerbody" onclick = "setBody(this.id)"> Lower body </button>
+                <button class = "body_part" id = "lowerbody" onclick = "setBody(this.id);setClickedFalse();"> Lower body </button>
             </a>
             <a href = "#core">
-                <button class = "body_part" id = "core_" onclick = "setBody(this.id)"> Core </button>
+                <button class = "body_part" id = "core_" onclick = "setBody(this.id);setClickedFalse();"> Core </button>
             </a>
             <a href = "#cardio">
-                <button class = "body_part" id = "cardio_" onclick = "setBody(this.id)"> Cardio </button>
+                <button class = "body_part" id = "cardio_" onclick = "setBody(this.id);setClickedFalse();"> Cardio </button>
             </a>
 
-            <a href = "#my">
+            <a href = "#my" onclick=" myWorkout()">
                 <button class = "body_part" id = "My_" onclick = "setBody(this.id)">My</button>
             </a>
         </div>
@@ -135,12 +135,18 @@
 
 
         <section id = "my">
+            <div id = "add_button">
+                <button id = "add_txt" onclick="addWorkout()">ADD</button>
+            </div>
+
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "cardio_workouts" id = "workoutCA" name = "ca" value = "temp"/>
+
             <div class = "myContainer">
                 <div class = "createWorkout">
                     aaaa
                 </div>
                 <div class = "addWorkout">
-                    bbbb
+                    
                 </div>
             </div>
         </section>

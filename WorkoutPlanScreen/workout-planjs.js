@@ -158,3 +158,38 @@ function setBody(clicked_id){
     console.log(localStorage.getItem("body_part"));
 }
 
+/*need to use js to create html for personal made workouts */
+function myWorkout(){
+
+    //check to see if user already clicked my. 
+    //if user keeps clicking the button then these elements are going to keep being made./.. (:Odkabwdajlk)
+    if(localStorage.getItem("clicked") != "true" || !localStorage.getItem("clicked")){
+        localStorage.setItem("clicked", "true");
+
+        var mydiv = document.getElementsByClassName("addWorkout")[0]; 
+        var container = document.getElementsByClassName("myContainer")[0];
+        var sec = document.getElementById("my");
+        const datalist = document.createElement("datalist");
+        datalist.setAttribute("id", "my_workouts");
+        const select = document.createElement("select");
+        select.setAttribute("id", "select_val_my");
+
+        sec.append(container);
+        container.append(mydiv);
+        mydiv.append(datalist);
+        datalist.append(select);
+
+    } 
+
+}
+
+function setClickedFalse(){
+    localStorage.setItem("clicked","false");
+    var d = document.getElementById("my_workouts");
+    var s = document.getElementById("select_val_my");
+
+    if(d != null){
+        d.remove();
+        s.remove();
+    }
+}
