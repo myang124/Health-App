@@ -57,10 +57,15 @@ section:target {
     text-align: center;
 }
 select{
-    width: 50%;
+    width: 20%;
     text-align: center;
 }
-
+.workouts {
+    width: 20%;
+}
+p{
+    display: inline;
+}
 
 /*add button in add workout*/
 #add_button{
@@ -83,4 +88,16 @@ datalist {
 input{
     width: 50%;
     text-align: center;
+}
+
+
+/*for my workout*/
+.myContainer{
+    position: relative;
+}
+
+.createWorkout{
+    position: absolute;
+    display: inline;
+    left: 20%;
 }

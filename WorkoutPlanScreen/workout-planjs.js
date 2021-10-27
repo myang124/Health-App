@@ -4,8 +4,12 @@ localStorage['upperbody'] = JSON.stringify(['Pushup', 'Bench press', 'Overhead p
  localStorage['lowerbody'] = JSON.stringify(['Dumbbell squat','Dumbbell goblet squat','Bulgarian split squat','side lunge','Glute bridge',
                                              'Forward lunge','Step-ups','Side leg lift with band','Jumping jacks','Dead lifts','Calf raises']);
 
+localStorage['core'] = JSON.stringify(['Forearm Plank','Russian Twist','Butterfly Sit-Up','High Boat to Low Boat','Forearm Plank Rock','Side Bend',
+                                         'Jackknife','Wheelbarrow','Leg Raise','Core Roll-Up','Bicycle Crunch']);
+
  var upperbodylist = JSON.parse(localStorage['upperbody']);
  var lowerbodylist = JSON.parse(localStorage['lowerbody']);
+ var corelist = JSON.parse(localStorage['core']);
  //localStorage.clear();
 
 
@@ -38,11 +42,33 @@ function addWorkout(){
         }
     } 
 
-    if(bodypart == "lowerbody"){
+    else if(bodypart == "lowerbody"){
         var workout = document.getElementById("workoutLO");
         var workoutToStr = workout.value;
 
         var inList = lowerbodychecklist(workoutToStr);  
+        if(inList === true){
+            if(localStorage.getItem(localStorage.getItem("day")) == null){
+                var list = [workoutToStr];
+                localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                //localStorage.setItem(localStorage.getItem("day"), list);
+            } else {
+                var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+                list.push(workoutToStr);
+                localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+            }
+            console.log(localStorage.getItem(localStorage.getItem("day")));
+        } else {
+            alert("This workout is not in the list.");
+        }
+    }
+
+    else if(bodypart == "core_"){
+        
+        var workout = document.getElementById("workoutCO");
+        var workoutToStr = workout.value;
+
+        var inList = corehecklist(workoutToStr);  
         if(inList === true){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
@@ -69,6 +95,9 @@ function changeInputText(id){
     } else if (id == "lower"){
         temp = document.getElementsByClassName("workouts")[1];
         temp.value = document.getElementById("selected_val_lo").value;
+    } else if(id == "c"){
+        temp = document.getElementsByClassName("workouts")[2];
+        temp.value = document.getElementById("selected_val_co").value;
     }
 }
 
@@ -81,7 +110,10 @@ function changeSelectText(id){
     else if(id == "workoutLO"){
         var temp = document.getElementById("selected_val_lo");
         temp.value = document.getElementsByClassName("workouts")[1].value;
-    } 
+    } else if(id == "workoutCO"){
+        var temp = document.getElementById("selected_val_co");
+        temp.value = document.getElementsByClassName("workouts")[2].value;
+    }
 }
 
 //checks if user input text is part of the lists of workouts
@@ -96,7 +128,7 @@ function upperbodychecklist(workoutToStr){
 }
 
 function lowerbodychecklist(workoutToStr){
-    console.log(workoutToStr);
+
     for(var index = 0; index < lowerbodylist.length; index++){
         if(lowerbodylist[index].toLowerCase() == workoutToStr.toLowerCase()){
             return true;
@@ -105,6 +137,14 @@ function lowerbodychecklist(workoutToStr){
     return false;
 }
 
+function corehecklist(workoutToStr){
+    for(var index = 0; index < corelist.length; index++){
+        if(corelist[index].toLowerCase() == workoutToStr.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
+}
 
 // keeps track of the day that was clicked to add workout to that day
 function setDay(clicked_id){

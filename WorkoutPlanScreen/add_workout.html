@@ -19,14 +19,14 @@
                 <button class = "body_part" id = "lowerbody" onclick = "setBody(this.id)"> Lower body </button>
             </a>
             <a href = "#core">
-                <button class = "body_part" id = "core" onclick = "setBody(this.id)"> Core </button>
+                <button class = "body_part" id = "core_" onclick = "setBody(this.id)"> Core </button>
             </a>
             <a href = "#cardio">
-                <button class = "body_part" id = "cardio" onclick = "setBody(this.id)"> Cardio </button>
+                <button class = "body_part" id = "cardio_" onclick = "setBody(this.id)"> Cardio </button>
             </a>
 
             <a href = "#my">
-                <button class = "body_part" id = "My" onclick = "setBody(this.id)">My</button>
+                <button class = "body_part" id = "My_" onclick = "setBody(this.id)">My</button>
             </a>
         </div>
 
@@ -91,29 +91,58 @@
             </datalist>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--****************-->
+        <!--Section for Core-->
+        <!--****************-->
 
         <section id = "core">
-            test3
+           <div id = "add_button">
+               <button id = "add_txt" onclick="addWorkout()">ADD</button>
+           </div>
+
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "core_workouts" id = "workoutCO" name = "cw" value = "Forearm Plank"/>
+
+            <datalist id = "core_workouts">
+                <select id = "selected_val_co">
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Forearm Plank">Forearm Plank</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Russian Twist">Russian Twist</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Butterfly Sit-Up">Butterfly Sit-Up</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "High Boat to Low Boat">High Boat to Low Boat</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Forearm Plank Rock">Forearm Plank Rock</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Side Bend">Side Bend</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Jackknife">Jackknife</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Wheelbarrow">Wheelbarrow</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Leg Raise">Leg Raise</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Core Roll-Up">Core Roll-Up</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Bicycle Crunch">Bicycle Crunch</option>
+                </select>
+            </datalist>
         </section>
+
+        <!--******************-->
+        <!--Section for Cardio-->
+        <!--******************-->
+
         <section id = "cardio">
-            test4
+            
+        </section>
+
+
+
+
+
+
+
+
+        <section id = "my">
+            <div class = "myContainer">
+                <div class = "createWorkout">
+                    aaaa
+                </div>
+                <div class = "addWorkout">
+                    bbbb
+                </div>
+            </div>
         </section>
     </body>
 </html>
