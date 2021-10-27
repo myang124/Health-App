@@ -17,17 +17,41 @@
                 <fieldset>
                  <legend>Food Information</legend>
 
-                 
-                 <label>Food Name: </label>
-                 <input type="text">
+                
+                 <label>*Food Name: </label>
+                 <input type="text" placeholder="Ex: Apple" onkeypress="return /[a-z]/i.test(event.key)">
                 
 
                  <div class="calorielabel">
-                    <label>Calories: </label>
-                    <input type="text">
+                    <label>*Calories: </label>
+                    <input type="text" placeholder="Ex: 80" onkeypress="return /[a-z]/i.test(event.key)" min="0">
+                 </div>
+
+                 <div class="servinglabel">
+                    <br>
+                    <label>*Servings/Quantity: </label>
+                    <input type="number" step="0.5" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    
+                 </div>
+
+                 <br>
+                 <label>Optional: </label>
+
+                 <div class="nutrition">
+                   
+                     <label>Proteins: </label>
+                     <input id="proteinlabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+                     <label>Carbohydrates: </label>
+                     <input id="carblabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+                     <label>Fats: </label>
+                     <input id="fatslabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
                  </div>
                 </fieldset>
             </form>
+
+            <div class="addbutton">
+                <button id="button">ADD TO LIST</button>
+            </div>
         </div>
     </div>
     <script src="caloric-calculator_script.js"></script>

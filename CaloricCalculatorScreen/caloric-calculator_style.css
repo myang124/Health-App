@@ -10,8 +10,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 7px solid black;
-    background-color: #60ddf0;
     border-radius: 40px;
+    background-image: linear-gradient(#60ddf0, #60f0bb);
   }
 
 .titleheading {
@@ -24,12 +24,16 @@ body {
 }
 
 .userinput {
+  font-family: "Open Sans", sans-serif;
   position: 'relative';
   margin-top: 400px;
 }
 
 .userinput fieldset {
   border: 3px solid #000;
+  font-weight: bold;
+  border-radius: 15px;
+  padding-top: 20px;
 }
 
 .userinput input{
@@ -40,6 +44,7 @@ body {
 .calorielabel {
   float:right;
   width:200px;
+  
 }
 .calorielabel input {
   width: 50%;
@@ -47,4 +52,38 @@ body {
   border-radius: 5px;
 }
 
+.nutrition{
+  width: 40%;
+  border-radius: 5px;
+  white-space: nowrap;
+  padding-bottom: 10px;
 
+}
+
+.nutrition input {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.addbutton {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -95px;
+  margin-top: 280px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+#button {
+  width:200px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.0.5);
+}
