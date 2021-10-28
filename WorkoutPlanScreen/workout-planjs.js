@@ -10,6 +10,7 @@ localStorage['core'] = JSON.stringify(['Forearm Plank','Russian Twist','Butterfl
  var upperbodylist = JSON.parse(localStorage['upperbody']);
  var lowerbodylist = JSON.parse(localStorage['lowerbody']);
  var corelist = JSON.parse(localStorage['core']);
+ var mylist = JSON.parse(localStorage['my']);
  //localStorage.clear();
 
 
@@ -17,6 +18,7 @@ localStorage['core'] = JSON.stringify(['Forearm Plank','Russian Twist','Butterfl
 function addWorkout(){
     
     var bodypart = localStorage.getItem("body_part");
+    console.log(bodypart);
     //first check if workout is in the list
 
     //dis is .... wack
@@ -84,6 +86,28 @@ function addWorkout(){
             alert("This workout is not in the list.");
         }
     }
+
+    else if(bodypart == "My_"){
+        var workout = document.getElementById("workoutMY");
+        var workoutToStr = workout.value;
+
+
+        var inList = mychecklist(workoutToStr);  
+        if(inList === true){
+            if(localStorage.getItem(localStorage.getItem("day")) == null){
+                var list = [workoutToStr];
+                localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                //localStorage.setItem(localStorage.getItem("day"), list);
+            } else {
+                var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+                list.push(workoutToStr);
+                localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+            }
+            console.log(localStorage.getItem(localStorage.getItem("day")));
+        } else {
+            alert("This workout is not in the list.");
+        }
+    }   
 }
 
 //updates the textfeild when a dropdown is clicked
@@ -98,6 +122,9 @@ function changeInputText(id){
     } else if(id == "c"){
         temp = document.getElementsByClassName("workouts")[2];
         temp.value = document.getElementById("selected_val_co").value;
+    } else if(id == "m"){
+        temp = document.getElementsByClassName("workouts")[4];
+        temp.value = document.getElementById("selected_val_my").value;
     }
 }
 
@@ -113,6 +140,9 @@ function changeSelectText(id){
     } else if(id == "workoutCO"){
         var temp = document.getElementById("selected_val_co");
         temp.value = document.getElementsByClassName("workouts")[2].value;
+    } else if(id == "workoutMY"){
+        var temp = document.getElementById("selected_val_my");
+        temp.value = document.getElementsByClassName("workouts")[4].value;
     }
 }
 
@@ -146,6 +176,15 @@ function corehecklist(workoutToStr){
     return false;
 }
 
+function mychecklist(workoutToStr){
+    for(var index = 0; index < mylist.length; index++){
+        if(mylist[index].toLowerCase() == workoutToStr.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
+}
+
 // keeps track of the day that was clicked to add workout to that day
 function setDay(clicked_id){
     localStorage.setItem("day",clicked_id);
@@ -160,10 +199,9 @@ function setBody(clicked_id){
 
 /*need to use js to create html for personal made workouts */
 function myWorkout(){
-
     //check to see if user already clicked my. 
     //if user keeps clicking the button then these elements are going to keep being made./.. (:Odkabwdajlk)
-    if(localStorage.getItem("clicked") != "true" || !localStorage.getItem("clicked")){
+    if(localStorage.getItem("clicked") != "true" || !localStorage.getItem("clicked") || document.getElementById("select_val_my") == null){
         localStorage.setItem("clicked", "true");
 
         var mydiv = document.getElementsByClassName("addWorkout")[0]; 
@@ -172,13 +210,25 @@ function myWorkout(){
         const datalist = document.createElement("datalist");
         datalist.setAttribute("id", "my_workouts");
         const select = document.createElement("select");
-        select.setAttribute("id", "select_val_my");
+        select.setAttribute("id", "selected_val_my");
 
         sec.append(container);
         container.append(mydiv);
         mydiv.append(datalist);
         datalist.append(select);
 
+        //need to add all the personal workouts already created here
+        if(localStorage.getItem("my") != null){
+            var my = JSON.parse(localStorage['my']);
+            for(var index = 0; index < my.length; index++){
+                var opt = document.createElement("option");
+                opt.value = my[index];
+                opt.innerHTML = my[index];
+                opt.setAttribute("id", "m");
+                opt.setAttribute("onclick", "changeInputText('m')");
+                select.append(opt);
+            }
+        }
     } 
 
 }
@@ -186,10 +236,42 @@ function myWorkout(){
 function setClickedFalse(){
     localStorage.setItem("clicked","false");
     var d = document.getElementById("my_workouts");
-    var s = document.getElementById("select_val_my");
+    var s = document.getElementById("selected_val_my");
 
     if(d != null){
         d.remove();
         s.remove();
+    }
+
+}
+
+function createPersonalWorkout(){
+    var input = document.getElementById("input").value;
+
+    if(input != ""){
+        var select = document.getElementById("selected_val_my");
+
+        var opt = document.createElement("option");
+        opt.value = input;
+        opt.innerHTML = input;
+        opt.setAttribute("id", "m");
+        opt.setAttribute("onclick", "changeInputText('m')");
+        select.appendChild(opt);
+
+        if(localStorage.getItem("my") == null){
+            localStorage['my'] = JSON.stringify([input]);
+        } else {
+            var my = JSON.parse(localStorage['my']);
+            //first check if workout exists or not
+            if(my.includes(input)){
+                alert("You already added this workout");
+            } else {
+                my.push(input);
+                var str = JSON.stringify(my);
+                localStorage.setItem("my",str);
+            }
+        }
+    } else {
+        alert("You have not entered anything.")
     }
 }

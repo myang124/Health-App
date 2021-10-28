@@ -132,18 +132,23 @@
 
 
 
-
-
+        <!--*****************************-->
+        <!--Section for personal workouts-->
+        <!--*****************************-->
         <section id = "my">
             <div id = "add_button">
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
-
-            <input oninput="changeSelectText(this.id)" class = "workouts" list = "cardio_workouts" id = "workoutCA" name = "ca" value = "temp"/>
+                    <input id = "input" class = "workouts" placeholder="Enter Workout to add..." style = "left: 10%; position: absolute;"/>
+                    <button onclick="createPersonalWorkout()" style = "left: 16%; top:50%; z-index: 1;font-size: 20px; position:absolute;">create workout</button>
+                </div>
+                </div>
+                
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "my_workouts" id = "workoutMY" name = "ca" />
 
             <div class = "myContainer">
                 <div class = "createWorkout">
-                    aaaa
+                
                 </div>
                 <div class = "addWorkout">
                     
