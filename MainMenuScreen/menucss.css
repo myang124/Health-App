@@ -1,14 +1,19 @@
 
+button {
+    font-family: "Open Sans", sans-serif;
+}
 /* for the menu buttons */
-
-
 .container button{
+    font-family: "Open Sans", sans-serif;
     font-size: 40px;
     padding: 10px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 30px;
     width: 100%;
     display: block;
+    position:relative;
+    left:-30px;
+    bottom: -80px;
 }
 
 /* these two just fills entire page up*/
@@ -17,17 +22,21 @@ body, html {
 }
 
 #menu-buttons{
-    height: 90%;
+    height: 92%;
 }
 
 section {
-    border: 10px solid gray;
+    border: 5px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
+    height: 200px;
+    width: 430px;
+    position:absolute;
+    top:30px;
+    right: 5px;
 }
-
-
 
 /* for the adding workout page */
 .workout_buttons{
@@ -39,3 +48,14 @@ section {
     border-radius: 10px;
     padding: 10px;
 }
+
+#entirepage {
+    width:450px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid black;
+    border-radius: 40px;
+    background-image: linear-gradient(#60ddf0, #60f0bb);
+    position: relative;
+  }
