@@ -39,6 +39,7 @@ section{
 section:target {
     display: block;
     text-align: center;
+    position: relative;
   }
 
 /*searching workout*/
