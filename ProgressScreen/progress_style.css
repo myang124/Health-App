@@ -1,6 +1,151 @@
-#header{
-    border: 10px solid gray;
-    display: flex;
+/*
+  Cynthia Sheng
+*/
+body {
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
-    justify-content: center;
+  }
+  #entirepage {
+      width:450px;
+      height: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 7px solid black;
+      border-radius: 40px;
+      background-image: linear-gradient(#60ddf0, #60f0bb);
+      position: relative;
+    }
+  
+  .titleheading {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      text-align: center;
+      text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+      text-decoration: underline;
+  }
+
+  #button {
+    width:200px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #6095f0;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #optionTable {
+    border-collapse: collapse;
+    margin: 50px auto;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    height:60px; 
+    width: 430px;
+    display:block;
+    }
+    
+    #calorieGraph{
+      display: none;
+  }
+  #calorieStat{
+    display: none;
 }
+  #macroChart{
+      display: none;
+    }
+#macroStat{
+    display:none;
+}
+  
+  table, th, td {
+    padding: 8px;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  th {
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  td {
+      font-size: 22px;
+      color: white;
+      height: 30px;
+      width: 430px;
+      text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    text-align: center;
+  }
+
+  .displayStat{
+    position: relative;
+    bottom: 38px;
+    align-items: center;
+  }
+  #weightStat td{
+      border: 2px solid black;
+  }
+  #calorieStat td{
+    border: 2px solid black;
+}
+#macroStat td{
+    border: 2px solid black;
+}
+
+  .displayGraph{
+    margin: 50px auto;
+    border: 3px solid black;
+    height:230px;
+    width: 400px;
+  }
+
+  
+  .homeicon {
+    color:black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #homebutton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .option {
+    width:120px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: #6095f0;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .option:focus{
+      background-color: #0e4bb4;
+  }
+
+  h1{
+      text-align: center;
+  }

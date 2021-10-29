@@ -1,14 +1,108 @@
+<!-- Cynthia Sheng -->
+
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <link rel="shortcut icon" href="#">                        
-    <link rel = "stylesheet" href = "progress_style.css">
-    <title>Progress</title>
-    <script src = "workout-planjs.js"></script>
+    <meta charset="utf-8">
+    <title>Progress Check</title>
+    <link rel="stylesheet" type="text/css" href="progress_style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section id= "header">
-        <h1> Progress Check </h1>
-    </section>
+    <div id="entirepage">
+        <div class="titleheading">
+            <h1>Progress Check</h1>
+        </div>
+    
+        <div class="graphOptions">
+            <table id="optionTable">
+                <tr class="options">
+                    <th><button class="option weightBut" onclick="displayWeight()">&nbsp; WEIGHT &nbsp;</button></th>
+                    <th><button class="option calorieBut" onclick="displayCalorie()">&nbsp; CALORIES &nbsp;</button></th>
+                    <th><button class="option macroBut" onclick="displayMacro()">&nbsp; MACROS &nbsp;</button></th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="displayGraph">
+            <h1 id="weightGraph">Weight Graph Here</h1>
+            <h1 id="calorieGraph" >Calorie Graph Here</h1>
+            <h1 id="macroChart">Macro Chart Here</h1>
+        </div>
+        <div class="displayStat">  
+            <table id="weightStat">
+                <tr>
+                    <td>Starting Weight:</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>Goal Weight:</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>Weight to lose/gain:</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Current Avg/Week:</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Weeks Until Goal Reached</td>
+                    <td>~9 Weeks</td>
+                </tr>
+            </table>
+
+            <table id="calorieStat">
+                <tr>
+                    <td>Daily Avg Intake:</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>Daily Avg Intake Goal:</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>Daily Avg Burn:</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Daily Avg Burn Goal:</td>
+                    <td>3</td>
+                </tr>
+            </table>
+
+            <table id="macroStat">
+                <tr>
+                    <td>Macro</td>
+                    <td>Current Avg Intake</td>
+                    <td>Daily Goal Intake</td>
+                </tr>
+                <tr>
+                    <td>Protein:</td>
+                    <td>60</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>Carbohydrates:</td>
+                    <td>400</td>
+                    <td>250</td>
+                </tr>
+                <tr>
+                    <td>Fats</td>
+                    <td>100</td>
+                    <td>60</td>
+                </tr>
+            </table>
+        </div>
+        <div class="homeicon">
+            <a href= "../MainMenuScreen/menu.html">
+                <button id="homebutton"><i class="fa fa-home" style="font-size: 3em;"></i></button>
+            </a>
+         </div>
+
+    </div>
+    <script src="progress_script.js"></script>
 </body>
 </html>
