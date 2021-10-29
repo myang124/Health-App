@@ -7,9 +7,13 @@ localStorage['upperbody'] = JSON.stringify(['Pushup', 'Bench press', 'Overhead p
 localStorage['core'] = JSON.stringify(['Forearm Plank','Russian Twist','Butterfly Sit-Up','High Boat to Low Boat','Forearm Plank Rock','Side Bend',
                                          'Jackknife','Wheelbarrow','Leg Raise','Core Roll-Up','Bicycle Crunch']);
 
+localStorage['cardio'] = JSON.stringify(['Jump rope' , 'Jumping jacks', 'Burpees' , 'Squat jumps' , 'High intensity interval training (HIIT)', 'Elliptical',
+                                            'Stair climber','Exercise bike','Treadmill','Rowing machine','Swimming']);
+
  var upperbodylist = JSON.parse(localStorage['upperbody']);
  var lowerbodylist = JSON.parse(localStorage['lowerbody']);
  var corelist = JSON.parse(localStorage['core']);
+ var cardiolist = JSON.parse(localStorage['cardio']);
  var mylist = JSON.parse(localStorage['my']);
  //localStorage.clear();
 
@@ -87,6 +91,28 @@ function addWorkout(){
         }
     }
 
+    else if(bodypart == "cardio_"){
+
+        var workout = document.getElementById("workoutCA");
+        var workoutToStr = workout.value;
+        console.log(workoutToStr);
+        var inList = cardiochecklist(workoutToStr);  
+        if(inList === true){
+            if(localStorage.getItem(localStorage.getItem("day")) == null){
+                var list = [workoutToStr];
+                localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                //localStorage.setItem(localStorage.getItem("day"), list);
+            } else {
+                var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+                list.push(workoutToStr);
+                localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+            }
+            console.log(localStorage.getItem(localStorage.getItem("day")));
+        } else {
+            alert("This workout is not in the list.");
+        }
+    }
+
     else if(bodypart == "My_"){
         var workout = document.getElementById("workoutMY");
         var workoutToStr = workout.value;
@@ -122,8 +148,12 @@ function changeInputText(id){
     } else if(id == "c"){
         temp = document.getElementsByClassName("workouts")[2];
         temp.value = document.getElementById("selected_val_co").value;
-    } else if(id == "m"){
-        temp = document.getElementsByClassName("workouts")[4];
+    } else if(id == "ca") {
+        temp = document.getElementsByClassName("workouts")[3];
+        temp.value = document.getElementById("selected_val_ca").value;
+    }
+    else if(id == "m"){
+        temp = document.getElementsByClassName("workouts")[5];
         temp.value = document.getElementById("selected_val_my").value;
     }
 }
@@ -140,9 +170,13 @@ function changeSelectText(id){
     } else if(id == "workoutCO"){
         var temp = document.getElementById("selected_val_co");
         temp.value = document.getElementsByClassName("workouts")[2].value;
-    } else if(id == "workoutMY"){
+    } else if(id == "workoutCA"){
+        var temp = document.getElementById("selected_val_ca");
+        temp.value = document.getElementsByClassName("workouts")[3].value;
+    }
+    else if(id == "workoutMY"){
         var temp = document.getElementById("selected_val_my");
-        temp.value = document.getElementsByClassName("workouts")[4].value;
+        temp.value = document.getElementsByClassName("workouts")[5].value;
     }
 }
 
@@ -176,6 +210,15 @@ function corehecklist(workoutToStr){
     return false;
 }
 
+function cardiochecklist(workoutToStr){
+    for(var index = 0; index < cardiolist.length; index++){
+        if(cardiolist[index].toLowerCase() == workoutToStr.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
+}
+
 function mychecklist(workoutToStr){
     for(var index = 0; index < mylist.length; index++){
         if(mylist[index].toLowerCase() == workoutToStr.toLowerCase()){
@@ -201,7 +244,8 @@ function setBody(clicked_id){
 function myWorkout(){
     //check to see if user already clicked my. 
     //if user keeps clicking the button then these elements are going to keep being made./.. (:Odkabwdajlk)
-    if(localStorage.getItem("clicked") != "true" || !localStorage.getItem("clicked") || document.getElementById("select_val_my") == null){
+    // ||  document.getElementById("select_val_my") == null
+    if(localStorage.getItem("clicked") != "true" || !localStorage.getItem("clicked")){
         localStorage.setItem("clicked", "true");
 
         var mydiv = document.getElementsByClassName("addWorkout")[0]; 

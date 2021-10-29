@@ -124,11 +124,28 @@
         <!--******************-->
 
         <section id = "cardio">
-            
+            <div id = "add_button">
+                <button id = "add_txt" onclick="addWorkout()">ADD</button>
+            </div>
+
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "cardio_workouts" id = "workoutCA" name = "caw" value = "Jump rope"/>
+
+            <datalist id = "cardio_workouts">
+                <select id = "selected_val_ca">
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Jump rope">Jump rope</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Jumping jacks">Jumping jacks</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Burpees">Burpees</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Squat jumps">Squat jumps</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "High intensity interval training (HIIT)">High intensity interval training (HIIT)</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Elliptical">Elliptical</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Stair climber">Stair climber</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Exercise bike">Exercise bike</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Treadmill">Treadmill</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Rowing machine">Rowing machine</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Swimming">Swimming</option>
+                </select>
+            </datalist>
         </section>
-
-
-
 
 
 
