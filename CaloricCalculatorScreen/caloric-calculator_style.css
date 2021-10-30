@@ -12,7 +12,10 @@ body {
     margin-right: auto;
     border: 7px solid black;
     border-radius: 40px;
-    background-image: linear-gradient(#60ddf0, #60f0bb);
+    
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
+    
+    
     position: relative;
   }
 
@@ -33,15 +36,17 @@ body {
 }
 
 .userinput fieldset {
-  border: 3px solid #000;
+  border: 3px solid rgb(0, 0, 0);
   font-weight: bold;
   border-radius: 15px;
   padding-top: 20px;
   width: 415px;
-  
+  color:white;
   position: absolute;
   bottom: 90px;
   right: 0px;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
 
 .userinput input{
@@ -101,7 +106,7 @@ body {
 table {
   border-collapse: collapse;
   margin: 50px auto;
-  background-color:#6095f0;
+  background-color:#485057;
   font-family: "Open Sans", sans-serif;
   color: white;
   text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
@@ -132,10 +137,10 @@ td {
 }
 
 .homeicon {
-  color:black;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 15px;
+  color:white;
 }
 
 #homebutton {
@@ -169,4 +174,12 @@ td {
              #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
   margin-left: auto;
   margin-right: auto;
+}
+
+span {
+  color:white; 
+  border: 3px solid #000; 
+  border-radius: 5px; 
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+                    #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
