@@ -56,6 +56,6 @@ section {
     margin-right: auto;
     border: 7px solid black;
     border-radius: 40px;
-    background-image: linear-gradient(#60ddf0, #60f0bb);
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
     position: relative;
   }

@@ -42,7 +42,7 @@
                  <div class="servinglabel">
                     <br>
                     <label>*Servings/Quantity: </label>
-                    <input id="servinglabel" type="number" step="0.5" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="1">
+                    <input id="servinglabel" type="number" step="0.5" placeholder="1" onkeyup="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" min="1">
                     
                  </div>
 
@@ -50,12 +50,11 @@
                  <label>Optional: </label>
 
                  <div class="nutrition">
-                   
-                     <label>Proteins: </label>
+                     <label>Proteins: &nbsp</label>
                      <input id="proteinlabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                     <label>Carbohydrates: </label>
+                     <label>&nbsp Carbohydrates: &nbsp</label>
                      <input id="carblabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                     <label>Fats: </label>
+                     <label>&nbsp Fats: &nbsp</label>
                      <input id="fatslabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
                  </div>
                 </fieldset>
@@ -66,14 +65,24 @@
             </div>
 
             <div class="homeicon">
-                <a href= "../MainMenuScreen/menu.html">
-                   <button id="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
-                </a>
+                   <button class="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
+                   <div class="dropdown-content"> 
+                        <a href="../MainMenuScreen/menu.html" style="text-decoration:none">Main Menu</a>
+                        <a href="../WorkoutPlanScreen/workout-plan.html" style="text-decoration:none">Workout Plan</a>
+                        <a href="../ProgressScreen/progress.html" style="text-decoration:none">Progress</a>
+                        <a href="../HealthScreen/health.html" style="text-decoration:none">Health</a>
+                   </div>
             </div>
             
             <div class="resetbutton">
                 <button id="reset">RESET LIST</button>
             </div>
+
+            <div class="totallabel">
+                <p id="total">&nbsp TOTAL CALORIES: 0</p>
+            </div>
+
+
         </div>
     </div>
     <script src="caloric-calculator_script.js"></script>

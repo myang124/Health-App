@@ -12,10 +12,7 @@ body {
     margin-right: auto;
     border: 7px solid black;
     border-radius: 40px;
-    
     background-image: linear-gradient(black, 0.5%,#97A9B4);
-    
-    
     position: relative;
   }
 
@@ -74,7 +71,7 @@ body {
 
 .nutrition input {
   display: inline-block;
-  padding-right: 15px;
+  padding-right: 0px;
 }
 
 .addbutton {
@@ -86,6 +83,7 @@ body {
   width: 130px;
   height: 40px;
   text-align: center;
+  
 }
 
 #button {
@@ -136,22 +134,6 @@ td {
              #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
 
-.homeicon {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color:white;
-}
-
-#homebutton {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-}
-
 .resetbutton {
   position: absolute;
   top:50%;
@@ -163,7 +145,7 @@ td {
 
 #reset {
   width:150px;
-  height: 30px;
+  height: 32px;
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -182,4 +164,76 @@ span {
   border-radius: 5px; 
   text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
                     #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+
+#total {
+  width:200px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  top: 465px;
+  right: 30px;
+  text-align: left;
+  line-height: 30px;
+  box-shadow: 1px 1.5px black;
+  border: 0.5px solid #000; 
+}
+
+.homeicon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color:white;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+}
+
+.homebutton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #97A9B4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+                    #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.homeicon:hover .dropdown-content {
+  display: block;
+}
+
+.homeicon:hover .homebutton {
+  background-color: transparent;
 }
