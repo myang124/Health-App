@@ -6,7 +6,12 @@
         <script src = "workout-planjs.js"></script>
     </head>
     <body>
-        
+        <!--home icon-->
+        <div class="homeicon">
+            <a href= "../MainMenuScreen/menu.html">
+               <button id="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
+            </a>
+        </div>
         <!--*********************************-->
         <!--Breaks the body parts in sections-->
         <!--*********************************-->
@@ -29,7 +34,7 @@
                 <button class = "body_part" id = "My_" onclick = "setBody(this.id)">My</button>
             </a>
             <div id =  "mylist" style =  " position: absolute; right: 15%; top:40%;">
-                MY CURRENT WORKOUTS
+                <label id = "mycurrworkout" >MY CURRENT WORKOUTS</label>
                 <ul id = "workoutList">
 
                 </ul>
@@ -164,7 +169,7 @@
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
                     <input id = "input" class = "workouts" placeholder="Enter Workout to add..." style = "left: 10%; position: absolute;"/>
-                    <button onclick="createPersonalWorkout()" style = "left: 16%; top:50%; z-index: 1;font-size: 20px; position:absolute;">create workout</button>
+                    <button id = "createe" onclick="createPersonalWorkout()" style = "left: 16%; top:50%; z-index: 1;font-size: 20px; position:absolute;">create workout</button>
                 </div>
                 </div>
                 
