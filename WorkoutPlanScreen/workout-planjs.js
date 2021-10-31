@@ -29,10 +29,14 @@ function viewList(){
         li.style.textAlign = "left";
         li.style.position = "relative";
         li.style.margin = "5px 0";
+        li.style.color = "white";
+        li.style.textShadow = "#000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px, #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px";
         
         var btn = document.createElement("button");
         btn.innerHTML = "X";
         btn.style.position = "absolute";
+        btn.style.color = "white";
+        btn.style.background = "#6095f0";
         btn.right = "0%";
         btn.onclick = function() { 
             var str = this.parentElement.textContent.slice(0, -1);

@@ -1,4 +1,40 @@
-
+body{
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
+    
+    height: 1000px;;
+}
+.homeicon {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    color:white;
+  }
+  
+  #homebutton {
+    position: fixed;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+h1, #mycurrworkout{
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    text-decoration: underline;
+}
+#mycurrworkout{
+    font-size: 20px;
+}
+input{
+   font-family: "Open Sans", sans-serif;
+    border: 3px solid rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 15px;
+}
 /* for the workout-plan menu buttons */
 .container button{
     font-size: 40px;
@@ -22,6 +58,14 @@
     text-align: center;
 }
 .workout_buttons .body_part{
+    border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     font-size: 40px;
     margin: 20px;
     border-radius: 10px;
@@ -30,10 +74,12 @@
 
 /* for the add_workout to only display workouts that are clicked */
 section{
-    border: 10px solid gray;
+    border: 7px solid black;
+    border-radius: 40px;
     display: none;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
 }
 
 section:target {
@@ -81,6 +127,25 @@ p{
   bottom: 20px;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+
+#createe{
+    border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
 
 datalist {
