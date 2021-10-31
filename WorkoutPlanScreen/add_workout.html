@@ -28,6 +28,13 @@
             <a href = "#my" onclick=" myWorkout()">
                 <button class = "body_part" id = "My_" onclick = "setBody(this.id)">My</button>
             </a>
+            <div id =  "mylist" style =  " position: absolute; right: 15%; top:40%;">
+                MY CURRENT WORKOUTS
+                <ul id = "workoutList">
+
+                </ul>
+                <script>viewList()</script>
+            </div>
         </div>
 
         <!--**********************-->

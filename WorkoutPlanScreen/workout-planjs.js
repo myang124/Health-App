@@ -14,15 +14,48 @@ localStorage['cardio'] = JSON.stringify(['Jump rope' , 'Jumping jacks', 'Burpees
  var lowerbodylist = JSON.parse(localStorage['lowerbody']);
  var corelist = JSON.parse(localStorage['core']);
  var cardiolist = JSON.parse(localStorage['cardio']);
- var mylist = JSON.parse(localStorage['my']);
  //localStorage.clear();
+//display list of workouts user has added
+function viewList(){
+    var div = document.getElementById("mylist");
+    var lst = JSON.parse(localStorage[localStorage.getItem('day')]);
+    var ul = document.getElementById("workoutList");
 
+    div.appendChild(ul);
+    for(var index = 0; index < lst.length; index++){
+
+        var li = document.createElement("li");
+        li.innerHTML = lst[index];
+        li.style.textAlign = "left";
+        li.style.position = "relative";
+        li.style.margin = "5px 0";
+        
+        var btn = document.createElement("button");
+        btn.innerHTML = "X";
+        btn.style.position = "absolute";
+        btn.right = "0%";
+        btn.onclick = function() { 
+            var str = this.parentElement.textContent.slice(0, -1);
+            this.parentElement.remove()
+            var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+            for(var e = 0; e < list.length; e++){
+                if(list[e] == str){
+                    list.splice(e,1);
+                }
+            }
+            localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+        };
+
+        li.append(btn);
+        ul.appendChild(li);
+    }
+    
+}
 
 //adds the workout when ADD is clicked
 function addWorkout(){
     
     var bodypart = localStorage.getItem("body_part");
-    console.log(bodypart);
     //first check if workout is in the list
 
     //dis is .... wack
@@ -42,7 +75,10 @@ function addWorkout(){
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
             }
-            console.log(localStorage.getItem(localStorage.getItem("day")));
+            //display new added workout
+            var temp = document.getElementById("workoutList");
+            temp.innerHTML = "";
+            viewList();
         } else {
             alert("This workout is not in the list.");
         }
@@ -63,7 +99,9 @@ function addWorkout(){
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
             }
-            console.log(localStorage.getItem(localStorage.getItem("day")));
+            var temp = document.getElementById("workoutList");
+            temp.innerHTML = "";
+            viewList();
         } else {
             alert("This workout is not in the list.");
         }
@@ -85,7 +123,9 @@ function addWorkout(){
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
             }
-            console.log(localStorage.getItem(localStorage.getItem("day")));
+            var temp = document.getElementById("workoutList");
+            temp.innerHTML = "";
+            viewList();
         } else {
             alert("This workout is not in the list.");
         }
@@ -107,7 +147,9 @@ function addWorkout(){
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
             }
-            console.log(localStorage.getItem(localStorage.getItem("day")));
+            var temp = document.getElementById("workoutList");
+            temp.innerHTML = "";
+            viewList();
         } else {
             alert("This workout is not in the list.");
         }
@@ -129,7 +171,9 @@ function addWorkout(){
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
             }
-            console.log(localStorage.getItem(localStorage.getItem("day")));
+            var temp = document.getElementById("workoutList");
+            temp.innerHTML = "";
+            viewList();
         } else {
             alert("This workout is not in the list.");
         }
@@ -220,6 +264,7 @@ function cardiochecklist(workoutToStr){
 }
 
 function mychecklist(workoutToStr){
+    var mylist = JSON.parse(localStorage['my']);
     for(var index = 0; index < mylist.length; index++){
         if(mylist[index].toLowerCase() == workoutToStr.toLowerCase()){
             return true;
@@ -289,6 +334,7 @@ function setClickedFalse(){
 
 }
 
+//this adds a new workout to MY when user clicked add workout button
 function createPersonalWorkout(){
     var input = document.getElementById("input").value;
 
