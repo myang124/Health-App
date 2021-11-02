@@ -8,10 +8,11 @@
 <body>
     <div id="entirepage">
         <div class="profile">
-            <p id="hellomsg">&nbsp Hello </p>
-            <p id="datemsg">&nbsp Today's Date is: </p>
-            <p id="currweight">&nbsp Your Current Weight is: </p>
-            <p id="goalweight">&nbsp Your Desired Goal Weight is: </p>
+            <p id="tempmsg">&nbsp Please Click The Pencil Icon <br>&nbsp To Set Information <br> &nbsp About Yourself. &#8599;</p>
+            <p id="hellomsg"> </p>
+            <p id="datemsg"> </p>
+            <p id="currweightmsg"> </p>
+            <p id="goalweightmsg"> </p>
         </div>
         
         <div class="container">
@@ -24,29 +25,30 @@
             <a href="../HealthScreen/health.html"><button>Health</button></a>
         </div>
 
-        <div class="settings">
-            <form action="/" class="form-container">
-                <h1>Enter Your Information</h1>
+        <div class="settings" id="popupForm">
+            <div class="form-container">
+                <h2>Enter Your Information</h2>
             
-                <label id="namelabel"><b>Name</b></label>
-                <input type="text" placeholder="Enter Name" id="name" required>
-                
-                <label id="datelabel"><b>Today's Date</b></label>
+                <label id="namelabel"><b>Name:</b></label>
+                <input type="text" placeholder="Enter Name" id="name">
+                <br>
+                <label id="datelabel"><b>Today's Date:</b></label>
                 <input type="date" id="date" required>
-
-                <label id="currweightlabel"><b>Current Weight</b></label>
-                <input type="number" placeholder="Enter Current Weight" id="currweight" required>
-
-                <label id="goalweightlabel"><b>Desired Weight</b></label>
-                <input type="number" placeholder="Enter Desired Weight" id="goalweight" required>
-
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-              </form>
+                <br>
+                <label id="currweightlabel"><b>Current Weight:</b></label>
+                <input type="number" placeholder="Enter Current Weight" id="currweight" min="0">
+                <br>
+                <label id="goalweightlabel"><b>Desired Weight:</b></label>
+                <input type="number" placeholder="Enter Desired Weight" id="goalweight" min="0">
+                <br>
+                <br>
+                <button id= "saveButton" type="button" class="savebtn" onclick="saveForm()">Save</button>
+                <button type="button" class="cancelbtn" onclick="closeForm()">Cancel</button>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="popupbutton" onclick="openForm()"><span style='font-size:40px;'>&#9998;</span></i></button>
         </div>
     </div>
-
-
-   
 </body>
 </html>

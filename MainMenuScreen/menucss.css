@@ -24,8 +24,33 @@
 }
 .settings {
     position:absolute;
-    right: 700px;
+    right: 720px;
+    top: 90px;
+    display: none;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    position: fixed;
+    border: 3px solid #f1f1f1;
 }
+
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #485057;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    border: 3px solid black;
+    color: white;
+    border-radius: 14px;
+  }
+
+.form-container button{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+  }
+
 .profile {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -42,6 +67,35 @@
     top: 20px;
     right: 7px;
 }
+
+.popup {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color:white;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+  }
+#tempmsg {
+    position:absolute;
+    top:30px;
+    right:100px;
+}
+.popup button:hover {
+    background-color: #ddd;
+  }
+
+.popupbutton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+  }
 
 /* for the adding workout page */
 .workout_buttons{
@@ -64,3 +118,5 @@
     background-image: linear-gradient(black, 0.5%,#97A9B4);
     position: relative;
   }
+
+ 
