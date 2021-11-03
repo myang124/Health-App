@@ -1,16 +1,12 @@
-/*
-//used to see if its the users first time opening app
-console.log(window.localStorage.getItem("first time"));
+var firstTime = sessionStorage.getItem("firsttime");
 
-if(window.localStorage.getItem("first time") != 1){
-    window.localStorage.setItem("first time", 1);
+if(!firstTime) {
+  //It is your first time on this page
+  sessionStorage.setItem("firsttime", 1);
+} else {
+  //It is NOT your first time on this page
+  sessionStorage.setItem("firsttime", 2);
 }
-
-console.log(window.localStorage.getItem("first time"));
-//user prompt to ask first time usres for name/goal/gender
-//window.localStorage.setItem("first time", 0);
-*/
-
 
 //Ask user for information once
 function openForm() {
@@ -21,11 +17,17 @@ function closeForm() {
     document.getElementById("popupForm").style.display = "none";
   }
 
+//Handles the save button when you fill out the form
 function saveForm() {
     var name = document.getElementById("name").value;
     var date = document.getElementById("date").value;
     var currweight = document.getElementById("currweight").value;
     var goalweight = document.getElementById("goalweight").value;
+
+    sessionStorage.setItem("hellomsg", "&nbsp Hello " + name + "!");
+    sessionStorage.setItem("datemsg", "&nbsp Today's Date is: " + date);
+    sessionStorage.setItem("currweightmsg", "&nbsp Your Current Weight is: " + currweight);
+    sessionStorage.setItem("goalweightmsg", "&nbsp Your Desired Goal Weight is: " + goalweight);
 
     document.getElementById("tempmsg").innerHTML = ""; 
     document.getElementById("hellomsg").innerHTML = "&nbsp Hello " + name + "!"; 
@@ -34,4 +36,17 @@ function saveForm() {
     document.getElementById("goalweightmsg").innerHTML = "&nbsp Your Desired Goal Weight is: " + goalweight;
 
     document.getElementById("popupForm").style.display = "none";
+}
+
+//Shows popup if it is your first time visiting this page.
+window.onload = function() {
+  if(sessionStorage.getItem("firsttime") == 1) {
+      openForm();
+  } else {
+    document.getElementById("hellomsg").innerHTML = sessionStorage.getItem("hellomsg");
+    document.getElementById("datemsg").innerHTML = sessionStorage.getItem("datemsg");
+    document.getElementById("currweightmsg").innerHTML = sessionStorage.getItem("currweightmsg");
+    document.getElementById("goalweightmsg").innerHTML = sessionStorage.getItem("goalweightmsg");
+    document.getElementById("tempmsg").innerHTML = ""; 
+  }
 }
