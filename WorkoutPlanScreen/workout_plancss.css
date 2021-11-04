@@ -1,7 +1,23 @@
 body{
+    margin-left: auto;
+    margin-right: auto;
+}
+#entirepage {
+    width:450px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid black;
+    border-radius: 40px;
     background-image: linear-gradient(black, 0.5%,#97A9B4);
-    
-    height: 1000px;;
+    position: relative;
+  }
+
+a {
+    text-decoration: none;
+}
+button {
+    box-shadow: 1px 1.5px black;
 }
 .homeicon {
     position: absolute;
@@ -69,12 +85,44 @@ input{
   font-weight: bold;
   border-radius: 15px;
 }
+
+.navbar {
+    border:3px solid black;
+    position: absolute;
+    top:795px;
+    right: -3px;
+    background-color: #6095f0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    width: 450px;
+    height: 50px;
+    border-radius: 0px 0px 33px 33px;
+    overflow: hidden;
+  }
+
+.navbar a{
+    border-right: 0.5px solid black;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 3px 15.4px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+                      #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+  }
+
 /* for the workout-plan menu buttons */
 .container button{
     font-size: 40px;
     padding: 10px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 14px;
     width: 100%;
     display: block;
 }
@@ -83,6 +131,9 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 60px;
+    right: 50px;
 }
 
 
@@ -100,10 +151,10 @@ table button{
   background-color: #6095f0;
   text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
              #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
-    font-size: 40px;
-    margin: 20px;
-    border-radius: 10px;
-    padding: 10px;
+  font-size: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .workout_buttons .body_part{
@@ -121,16 +172,20 @@ table button{
     padding: 10px;
 }
 
-
+#header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
 
 /* for the add_workout to only display workouts that are clicked */
 section{
-    border: 7px solid black;
     border-radius: 40px;
     display: none;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(black, 0.5%,#97A9B4);
+    background-color: transparent;
 }
 
 section:target {
