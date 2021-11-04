@@ -23,34 +23,51 @@
     right: -50px;
 }
 .settings {
-    position:absolute;
-    right: 720px;
-    top: 90px;
+    position:relative;
+    right: -20px;
+    top: 100px;
     display: none;
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    position: fixed;
-    border: 3px solid #f1f1f1;
 }
 
-
 .form-container {
-    max-width: 300px;
+    width: 350px;
+    height: 300px;
     padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
     background-color: #485057;
-    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   rgb(90, 71, 71) 0px 0px 2px,
                #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
-    border: 3px solid black;
+    border: 3px solid red;
     color: white;
     border-radius: 14px;
+    font-size: 20px;
   }
 
 .form-container button{
+    width:100px;
+    height: 50px;
+    border-radius: 15px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
+    font-size: 25px;
+    color: white;
+    background-color: #6095f0;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1.5px black;
+  }
+.savebtn:hover{
+    background-color: green;
   }
 
+.cancelbtn:hover {
+  background-color: red;
+}
 .profile {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
