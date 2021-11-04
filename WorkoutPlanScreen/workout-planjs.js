@@ -42,11 +42,16 @@ function viewList(){
             var str = this.parentElement.textContent.slice(0, -1);
             this.parentElement.remove()
             var list = JSON.parse(localStorage[localStorage.getItem("day")]);
+            var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
             for(var e = 0; e < list.length; e++){
                 if(list[e] == str){
                     list.splice(e,1);
                 }
+                if(list1[e] == str){
+                    list1.splice(e,1);
+                }
             }
+            localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
             localStorage[localStorage.getItem("day")] = JSON.stringify(list);
         };
 
@@ -74,10 +79,19 @@ function addWorkout(){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
                 localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                localStorage[localStorage.getItem('day') + "list"] = JSON.stringify(list);
             } else {
                 var list = JSON.parse(localStorage[localStorage.getItem("day")]);
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+                //need to create seperate list for workout page list to mark down.
+                if(localStorage[localStorage.getItem("day") + "list"] == null){
+                    localStorage[localStorage.getItem('day') + "list"] = JSON.stringify([workoutToStr]);
+                } else {
+                    var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
+                    list1.push(workoutToStr);
+                    localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
+                }
             }
             //display new added workout
             var temp = document.getElementById("workoutList");
@@ -97,11 +111,19 @@ function addWorkout(){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
                 localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                localStorage[localStorage.getItem('day') + "list"] = JSON.stringify(list);
                 //localStorage.setItem(localStorage.getItem("day"), list);
             } else {
                 var list = JSON.parse(localStorage[localStorage.getItem("day")]);
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+                if(localStorage[localStorage.getItem("day") + "list"] == null){
+                    localStorage[localStorage.getItem('day') + "list"] = JSON.stringify([workoutToStr]);
+                } else {
+                    var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
+                    list1.push(workoutToStr);
+                    localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
+                }
             }
             var temp = document.getElementById("workoutList");
             temp.innerHTML = "";
@@ -121,11 +143,19 @@ function addWorkout(){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
                 localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                localStorage[localStorage.getItem('day') + "list"] = JSON.stringify(list);
                 //localStorage.setItem(localStorage.getItem("day"), list);
             } else {
                 var list = JSON.parse(localStorage[localStorage.getItem("day")]);
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+                if(localStorage[localStorage.getItem("day") + "list"] == null){
+                    localStorage[localStorage.getItem('day') + "list"] = JSON.stringify([workoutToStr]);
+                } else {
+                    var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
+                    list1.push(workoutToStr);
+                    localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
+                }
             }
             var temp = document.getElementById("workoutList");
             temp.innerHTML = "";
@@ -145,11 +175,19 @@ function addWorkout(){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
                 localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                localStorage[localStorage.getItem('day') + "list"] = JSON.stringify(list);
                 //localStorage.setItem(localStorage.getItem("day"), list);
             } else {
                 var list = JSON.parse(localStorage[localStorage.getItem("day")]);
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+                if(localStorage[localStorage.getItem("day") + "list"] == null){
+                    localStorage[localStorage.getItem('day') + "list"] = JSON.stringify([workoutToStr]);
+                } else {
+                    var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
+                    list1.push(workoutToStr);
+                    localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
+                }
             }
             var temp = document.getElementById("workoutList");
             temp.innerHTML = "";
@@ -169,11 +207,19 @@ function addWorkout(){
             if(localStorage.getItem(localStorage.getItem("day")) == null){
                 var list = [workoutToStr];
                 localStorage[localStorage.getItem('day')] = JSON.stringify(list);
+                localStorage[localStorage.getItem('day') + "list"] = JSON.stringify(list);
                 //localStorage.setItem(localStorage.getItem("day"), list);
             } else {
                 var list = JSON.parse(localStorage[localStorage.getItem("day")]);
                 list.push(workoutToStr);
                 localStorage[localStorage.getItem("day")] = JSON.stringify(list);
+                if(localStorage[localStorage.getItem("day") + "list"] == null){
+                    localStorage[localStorage.getItem('day') + "list"] = JSON.stringify([workoutToStr]);
+                } else {
+                    var list1 = JSON.parse(localStorage[localStorage.getItem("day") + "list"]);
+                    list1.push(workoutToStr);
+                    localStorage[localStorage.getItem("day") + "list"] = JSON.stringify(list1);
+                }
             }
             var temp = document.getElementById("workoutList");
             temp.innerHTML = "";

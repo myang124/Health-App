@@ -1,0 +1,87 @@
+#checklist li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+section{
+    border: 7px solid black;
+    border-radius: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
+}
+
+
+body{
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
+    
+    height: 1000px;;
+}
+.homeicon {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    color:white;
+}
+  
+#homebutton {
+    position: fixed;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #97A9B4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: "Open Sans", sans-serif;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+                      #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  .homeicon:hover .dropdown-content {
+    display: block;
+}
+  
+  .homeicon:hover .homebutton {
+    background-color: transparent;
+}
+
+#complete_button{
+    position: fixed;
+  left: 50%;
+  height:50px;
+  width: 20%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background-color: #6095f0;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}

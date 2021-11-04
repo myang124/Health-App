@@ -7,6 +7,16 @@
     <title>My Workout Plan</title>
 </head>
 <body>
+    <!--home icon-->
+    <div class="homeicon">
+        <button class="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
+        <div class="dropdown-content"> 
+             <a href="../MainMenuScreen/menu.html" style="text-decoration:none">Main Menu</a>
+             <a href="../CaloricCalculatorScreen/caloric-calculator_page.html" style="text-decoration:none">Calorie Calculator</a>
+             <a href="../ProgressScreen/progress.html" style="text-decoration:none">Progress</a>
+             <a href="../HealthScreen/health.html" style="text-decoration:none">Health</a>
+        </div>
+    </div>
     <section id = "layout">
         <h1>My Workout Plan!</h1>
     </section>
@@ -14,7 +24,11 @@
         <div>
             <table class = "container">
                 <tr>
-                    <th><button>Monday</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_monday')">Monday</button>
+                        </a>
+                    </th>
                     <th>
                         <a href = "add_workout.html">
                             <button  onclick="setDay(this.id)" id = "add_monday">+</button>
@@ -22,7 +36,11 @@
                     </th>
                 </tr>
                 <tr>
-                    <th><button>Tuesday</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_tuesday')">Tuesday</button>
+                        </a>
+                    </th>
                     <th>
                         <a href = "add_workout.html">
                             <button onclick="setDay(this.id)" id = "add_tuesday">+</button>
@@ -30,24 +48,64 @@
                     </th>
                 </tr>
                 <tr>
-                    <th><button>Wednesday</button></th>
-                    <th><button onclick="setDay(this.id)" id = "add_wednesday">+</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_wednesday')">Wednesday</button>
+                        </a>
+                    </th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = "add_wednesday">+</button>
+                        </a>
+                    </th>
                 </tr>
                 <tr>
-                    <th><button>Thursday</button></th>
-                    <th><button onclick="setDay(this.id)" id = "add_thursday">+</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_thursday')">Thursday</button>
+                        </a>
+                    </th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = "add_thursday">+</button>
+                        </a>
+                    </th>
                 </tr>
                 <tr>
-                    <th><button>Friday</button></th>
-                    <th><button onclick="setDay(this.id)" id = "add_friday">+</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_friday')">Friday</button>
+                        </a>
+                    </th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = "add_friday">+</button>
+                        </a>
+                    </th>
                 </tr>
                 <tr>
-                    <th><button>Saturday</button></th>
-                    <th><button onclick="setDay(this.id)" id = add_saturday>+</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_saturday')">Saturday</button>
+                        </a>
+                    </th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = add_saturday>+</button>
+                        </a>
+                    </th>
                 </tr>
                 <tr>
-                    <th><button>Sunday</button></th>
-                    <th><button onclick="setDay(this.id)" id = "add_sunday">+</button></th>
+                    <th>
+                        <a href = "myWorkouts.html">
+                            <button onclick="setDay('add_sunday')">Sunday</button>
+                        </a>
+                    </th>
+                    <th>
+                        <a href = "add_workout.html">
+                            <button onclick="setDay(this.id)" id = "add_sunday">+</button>
+                        </a>
+                    </th>
                 </tr>
             </table>
         </div>
