@@ -7,16 +7,15 @@ body {
     align-items: center;
   }
   #entirepage {
-      width:450px;
-      height: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      border: 7px solid black;
-      border-radius: 40px;
-      background-image: linear-gradient(#60ddf0, #60f0bb);
-      position: relative;
-    }
-  
+    width:450px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid black;
+    border-radius: 40px;
+    background-color: #97A9B4;
+    position: relative;
+  }
   .titleheading {
       font-family: "Open Sans", sans-serif;
       color: white;
@@ -26,45 +25,66 @@ body {
       text-decoration: underline;
   }
 
-  #button {
-    width:200px;
+  .option {
+    width:125px;
     height: 40px;
     border-radius: 5px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 17px;
     color: white;
-    background-color: #6095f0;
+    background-color: #97A9B4;
     text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
                #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     margin-left: auto;
     margin-right: auto;
   }
+
+  .option:focus{
+      background-color: #6095f0;
+  }
+
+  h1{
+      text-align: center;
+  }
+  .graphOptions{
+    text-align: center;
+    background-color: #485057;
+    border: 1px solid #485057;
+  }
   
   #optionTable {
     border-collapse: collapse;
-    margin: 50px auto;
     font-family: "Open Sans", sans-serif;
     color: white;
     text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
                #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     height:60px; 
     width: 430px;
-    display:block;
+    display: inline-table;
     }
-    
-    #calorieGraph{
-      display: none;
+  
+  .displayGraph{
+    height:325px;
+    background-color: #485057;
+    border: 1px solid #485057;
+  }
+  img{
+    width: 425px;
+    height: 100%;
+  }
+  #calorieGraph{
+    display: none;
   }
   #calorieStat{
     display: none;
-}
+  }
   #macroChart{
       display: none;
     }
-#macroStat{
+  #macroStat{
     display:none;
-}
+  }
   
   table, th, td {
     padding: 8px;
@@ -79,46 +99,54 @@ body {
   }
   
   td {
-      font-size: 22px;
-      color: white;
-      height: 30px;
-      width: 430px;
-      text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+    font-size: 22px;
+    color: white;
+    height: 30px;
+    width: 430px;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
                #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     text-align: center;
   }
 
   .displayStat{
-    position: relative;
     bottom: 38px;
     align-items: center;
+    overflow-y: auto;
   }
-  #weightStat td{
-      border: 2px solid black;
+  #weightStat tr{
+    border-bottom: 2px solid #485057;
+    display: inline-table;
   }
-  #calorieStat td{
-    border: 2px solid black;
-}
-#macroStat td{
-    border: 2px solid black;
-}
-
-  .displayGraph{
-    margin: 50px auto;
-    border: 3px solid black;
-    height:230px;
-    width: 400px;
+  #calorieStat tr{
+    border-bottom: 2px solid #485057;
+    display: inline-table;
+  }
+  #macroStat tr{
+    border-bottom: 2px solid #485057;
+    display: inline-table;
   }
 
-  
+  #weightStat tr:last-child{
+    border-bottom: none;
+  }
+
+  #calorieStat tr:last-child{
+    border-bottom: none;
+  }
+
+  #macroStat tr:last-child{
+    border-bottom: none;
+  }
   .homeicon {
-    color:black;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
+    color:white;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
   }
   
-  #homebutton {
+  .homebutton {
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
@@ -127,25 +155,35 @@ body {
     outline: none;
   }
   
-  .option {
-    width:120px;
-    height: 40px;
-    border-radius: 5px;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #97A9B4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: 15px;
+  }
+  
+  .dropdown-content a {
     color: white;
-    background-color: #6095f0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Open Sans", sans-serif;
     text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
-               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
-    margin-left: auto;
-    margin-right: auto;
+                      #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
   }
-
-  .option:focus{
-      background-color: #0e4bb4;
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
   }
-
-  h1{
-      text-align: center;
+  
+  .homeicon:hover .dropdown-content {
+    display: block;
   }
+  
+  .homeicon:hover .homebutton {
+    background-color: transparent;
+  }
+  

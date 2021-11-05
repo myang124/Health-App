@@ -18,15 +18,15 @@
         <div class="graphOptions">
             <table id="optionTable">
                 <tr class="options">
-                    <th><button class="option weightBut" onclick="displayWeight()">&nbsp; WEIGHT &nbsp;</button></th>
-                    <th><button class="option calorieBut" onclick="displayCalorie()">&nbsp; CALORIES &nbsp;</button></th>
-                    <th><button class="option macroBut" onclick="displayMacro()">&nbsp; MACROS &nbsp;</button></th>
+                    <th><button class="option" onclick="displayWeight()">&nbsp; WEIGHT &nbsp;</button></th>
+                    <th><button class="option" onclick="displayCalorie()">&nbsp; CALORIES &nbsp;</button></th>
+                    <th><button class="option" onclick="displayMacro()">&nbsp; MACROS &nbsp;</button></th>
                 </tr>
             </table>
         </div>
 
         <div class="displayGraph">
-            <h1 id="weightGraph">Weight Graph Here</h1>
+            <img id="weightGraph" src="weight_graph.png">
             <h1 id="calorieGraph" >Calorie Graph Here</h1>
             <h1 id="macroChart">Macro Chart Here</h1>
         </div>
@@ -85,22 +85,26 @@
                     <td>56</td>
                 </tr>
                 <tr>
-                    <td>Carbohydrates:</td>
+                    <td>Carbs:</td>
                     <td>400</td>
                     <td>250</td>
                 </tr>
                 <tr>
-                    <td>Fats</td>
+                    <td>Fats:</td>
                     <td>100</td>
                     <td>60</td>
                 </tr>
             </table>
         </div>
         <div class="homeicon">
-            <a href= "../MainMenuScreen/menu.html">
-                <button id="homebutton"><i class="fa fa-home" style="font-size: 3em;"></i></button>
-            </a>
-         </div>
+            <button class="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
+            <div class="dropdown-content"> 
+                 <a href="../MainMenuScreen/menu.html" style="text-decoration:none">Main Menu</a>
+                 <a href="../WorkoutPlanScreen/workout-plan.html" style="text-decoration:none">Workout Plan</a>
+                 <a href="../ProgressScreen/progress.html" style="text-decoration:none">Progress</a>
+                 <a href="../HealthScreen/health.html" style="text-decoration:none">Health</a>
+            </div>
+        </div>
 
     </div>
     <script src="progress_script.js"></script>
