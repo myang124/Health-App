@@ -1,7 +1,9 @@
-body{
-    margin-left: auto;
-    margin-right: auto;
+
+#five{
+    height: 900px;
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
 }
+
 #entirepage {
     width:450px;
     height: 850px;
