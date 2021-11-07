@@ -35,4 +35,11 @@ function viewList(){
                 ul.appendChild(li);
                 li.appendChild(input);
             }
+
+            var remain = document.getElementById("task-number");
+            remain.textContent = "You have " + myList.length + " workout remaining!";
+
+            if(myList.length == 0){
+                remain.textContent = "You have 0 workouts! please go back and click + to add more workouts.";
+            }
 }

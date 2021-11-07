@@ -1,8 +1,11 @@
 localStorage['upperbody'] = JSON.stringify(['Pushup', 'Bench press', 'Overhead press', 'Incline bench press', 'Bentover row', 'Pullup',
-'Dumbbell curl', 'Hammer curl', 'Triceps pushdown', 'Dip', 'Lying triceps extension', 'Lateral raise' , 'Bentover lateral raise', 'Face pull', 'Shrug']);
+'Dumbbell curl', 'Hammer curl', 'Triceps pushdown', 'Dip', 'Lying triceps extension', 'Lateral raise' , 'Bentover lateral raise', 'Face pull', 'Shrug','Barbell Bench Press',
+'Lat-pulldowns','Seated Dumbbell Press','Barbell Bicep Curls','Triceps Rope Pushdowns','Overhead Bar Extensions','EZ Bar Curls','Machine Chest Press','T-Bar Row','EZ Bar Upright Rows',
+'Cable Fly','Skullcrushers','Chest Dip','One Arm Dumbbell Extension','Barbell Front Raise','Dumbbell Lateral Raise','Wide Grip Pull Up','Machine Reverse Fly','Upright Row','Dumbbell Flys',
+'Cable Crossovers','Close Grip Bench Press','Seated Dumbbell Press','Bent Over Barbell Row','Smith Machine Upright Row','Dips','Pullups','Pulldowns']);
 
- localStorage['lowerbody'] = JSON.stringify(['Dumbbell squat','Dumbbell goblet squat','Bulgarian split squat','side lunge','Glute bridge',
-                                             'Forward lunge','Step-ups','Side leg lift with band','Jumping jacks','Dead lifts','Calf raises']);
+ localStorage['lowerbody'] = JSON.stringify(['Dumbbell squat','Dumbbell goblet squat','Bulgarian split squat','side lunge','Glute bridge','Leg Press Machine','Lunges','Leg Curl','Hamstring Curls',
+                                             'Forward lunge','Step-ups','Side leg lift with band','Jumping jacks','Dead lifts','Calf raises','Leg Extensions','Close-Grip Pulldowns','Squat','Standing Calf Raise']);
 
 localStorage['core'] = JSON.stringify(['Forearm Plank','Russian Twist','Butterfly Sit-Up','High Boat to Low Boat','Forearm Plank Rock','Side Bend',
                                          'Jackknife','Wheelbarrow','Leg Raise','Core Roll-Up','Bicycle Crunch']);
@@ -414,4 +417,56 @@ function createPersonalWorkout(){
     } else {
         alert("You have not entered anything.")
     }
+}
+
+function generateWorkout(){
+    var num = prompt("Type 1 for beinnger, 2 for intermediate, or 3 for advanced workout.");
+    var mon = [];
+    var tu = [];
+    var wed = [];
+    var th = [];
+    var fri = [];
+    var sat = [];
+    var sun = [];
+    if(num == 1){
+        mon = ['Barbell Bench Press - 4 sets of 8 reps','Lat-pulldowns - 4 sets of 10 reps','Seated Dumbbell Press - 4 sets of 10 reps',
+               'Leg Extensions - 4 sets of 10 reps','Barbell Bicep Curls - 3 sets of 10 reps','Triceps Rope Pushdowns - 3 sets of 15 reps'];
+        tu = ['Leg Press Machine – 4 sets of 8 reps','Overhead Bar Extensions – 3 sets of 20 reps','EZ Bar Curls – 4 sets of 10 reps',
+              'Machine Chest Press – 4 sets of 10 reps','T-Bar Row – 4 sets of 10 reps','Lateral Raises – 3 sets of 20 reps'];
+        wed = ['EZ Bar Upright Rows – 3 sets of 15 reps','Close-Grip Pulldowns – 4 sets of 12 reps','Cable Fly – 4 sets of 10 reps',
+              'Lunges – 3 sets of 10 reps per leg','Skullcrushers – 3 sets of 15 reps','Hammer Curls – 3 sets of 12 reps'];
+    } else if(num == 2){
+        mon = ['Dumbbell Bench Press – 3 sets of 10 reps','Incline Dumbbell Bench Press – 3 sets of 10 reps','Chest Dip – 3 sets of reps','Skullcrushers – 3 sets of 8-10 Reps','One Arm Dumbbell Extension – 3 sets of 10 reps',
+              'Tricep Extension – 3 sets of 10 reps','Barbell Front Raise – 4 sets of 12 reps','Dumbbell Lateral Raise – 4 sets of 15 reps']
+        tu = ['Wide Grip Pull Up - 3 sets of reps','Lat Pull Down – 3 sets of 10 reps','Straight Arm Lat Pull Down – 3 sets of 10 reps','Machine Reverse Fly – 3 sets of 10 reps','Upright Row – 3 sets of 8 reps',
+              'Standing Barbell Curl – 3 sets of 8-10 reps','Preacher Curl – 3 sets of 10 reps','Incline Dumbbell Curl – 3 sets of 10 reps'];
+        wed = ['Squat – 4 sets of 10 reps','Dumbbell Lunge – 3 sets of 8 reps','45 Degree Leg Press – 3 sets of 12 reps','Leg Curl – 3 sets of 15 reps','Leg Extension – 3 sets of 15 reps','Standing Calf Raise – 5 sets of 10 reps',
+              'Seated Calf Raise – 5 sets of 15 reps'];
+        th = ['Barbell Bench Press – 3 sets of 10 reps','Dumbbell Flys – 3 sets of 10 reps','Cable Crossovers – 3 sets of 10 reps','Close Grip Bench Press – 4 sets of 10 reps','Lying Dumbbell Extension – 3 sets of 10 reps',
+             'Tricep Kickback – 3 sets of 10 reps','Seated Dumbbell Press – 4 sets of 10 reps','One Arm Cable Lateral Raise – 3 sets of 12 reps'];
+        fri = ['Seated Row – 4 sets of 10 reps','Bent Over Barbell Row – 3 sets of 10 reps','Bent Over Row – 3 sets of 12 reps','Smith Machine Upright Row – 3 sets of 8 reps','Cable Curl – 4 sets of 8 reps',
+              'Concentration Curl – 3 sets of 10 reps','Reverse Barbell Curl – 3 sets of 10 reps'];
+    } else if(num == 3){
+        mon = ['Barbell Bench Press – 4 sets of 10 reps','Incline Dumbbell Press – 3 sets of 8 reps','Dips – 3 sets of 10 reps','Pullups – 3 sets of 8 reps','Pendlay Rows – 3 sets of 10 reps','Pulldowns – 3 sets of 10 reps'];
+        tu = ['Squats - 4 sets of 10 reps','Leg Press – 3 sets of 10 reps','Stiff-Legged Deadlift – 5 sets of 5 reps','Hamstring Curls – 3 sets of 8 reps','Calf-Raise – 5 sets of 10 reps'];
+        wed = ['Dumbbell Press – 3 sets of 8 reps','Lateral Raises – 5 sets of 10 reps','Barbell Curls – 5 sets of 10 reps','Dumbbell Curls – 3 sets of 10 reps'];
+        fri = ['Flat Dumbbell Press – 5 sets of 6 reps','Incline Dumbbell Press – 3 sets of 10 reps','Hammer Strength Press – 3 sets of 10 reps','Cable Flys – 3 sets of 12 reps','Lateral Raises – 5 sets of 15 reps', 'Reverse-Grip Pull-Downs – 5 sets of 15 reps'];
+        sat = ['Barbell Rows – 5 sets of 20 reps','Barbell Shrugs – 3 sets of 15 reps','Rack Deadlifts – 3 sets of 12 reps','Pullups – 3 sets of 10 reps','Pulldowns – 3 sets of 10 reps'];
+        sun = ['Front Squats – 5 sets of 20 reps','Leg Extensions – 5 sets of 10 reps','Hamstring Curls – 5 sets of 10 reps','Seated Calf Raise – 5 sets of 10 reps','Standing Calf Raise – 3 sets of 12 reps'];
+    } else {
+        alert("You entered an invalid number, please try agian");
+        generateWorkout();
+        return;
+    }
+
+
+    localStorage["add_mondaylist"] = JSON.stringify(mon);
+    localStorage["add_tuesdaylist"] = JSON.stringify(tu);
+    localStorage["add_wednesdaylist"] = JSON.stringify(wed);
+    localStorage["add_thursdaylist"] = JSON.stringify(th);
+    localStorage["add_fridaylist"] = JSON.stringify(fri);
+    localStorage["add_saturdaylist"] = JSON.stringify(sat);
+    localStorage["add_sundaylist"] = JSON.stringify(sun);
+
+    alert("workout complete! please click the days to view your workout plan.")
 }

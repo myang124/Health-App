@@ -15,8 +15,8 @@
                  <a href="../HealthScreen/health.html" style="text-decoration:none">Health</a>
             </div>
         </div>
-        <section>
-            You have X workouts left!
+        <section id = "task-number">
+            
         </section>
         <ul id="checklist">
 
@@ -40,6 +40,8 @@
                 ul.appendChild(li);
                 li.appendChild(input);
             }
+            var remain = document.getElementById("task-number");
+            remain.textContent = "You have " + myList.length + " workouts left!";
         </script>
     </body>
 </html>
