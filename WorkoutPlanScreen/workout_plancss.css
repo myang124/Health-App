@@ -1,4 +1,3 @@
-
 #five{
     height: 900px;
     background-image: linear-gradient(black, 0.5%,#97A9B4);
@@ -239,7 +238,7 @@ p{
   left: 50%;
   height:50px;
   width: 20%;
-  bottom: 20px;
+  bottom: 15%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   border-radius: 5px;
@@ -296,3 +295,28 @@ ul li button{
     position: absolute;
     right: 0%;
 }
+
+#navtemp{
+    border:3px solid black;
+    position: fixed;
+    top:85%;
+    right: 37.5%;
+    background-color: #6095f0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    width: 450px;
+    height: 50px;
+    border-radius: 0px 0px 33px 33px;
+    overflow: hidden;
+    border-right: 0.5px solid black;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 3px 20.7px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+                      #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    
+  }

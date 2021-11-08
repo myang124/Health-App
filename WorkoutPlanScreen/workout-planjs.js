@@ -420,7 +420,7 @@ function createPersonalWorkout(){
 }
 
 function generateWorkout(){
-    var num = prompt("Type 1 for beinnger, 2 for intermediate, or 3 for advanced workout.");
+    var num = prompt("Type 1 for beginner, 2 for intermediate, or 3 for advanced workout.");
     var mon = [];
     var tu = [];
     var wed = [];
