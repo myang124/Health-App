@@ -454,8 +454,7 @@ function generateWorkout(){
         sat = ['Barbell Rows – 5 sets of 20 reps','Barbell Shrugs – 3 sets of 15 reps','Rack Deadlifts – 3 sets of 12 reps','Pullups – 3 sets of 10 reps','Pulldowns – 3 sets of 10 reps'];
         sun = ['Front Squats – 5 sets of 20 reps','Leg Extensions – 5 sets of 10 reps','Hamstring Curls – 5 sets of 10 reps','Seated Calf Raise – 5 sets of 10 reps','Standing Calf Raise – 3 sets of 12 reps'];
     } else {
-        alert("You entered an invalid number, please try agian");
-        generateWorkout();
+        alert("You entered an invalid number");
         return;
     }
 
