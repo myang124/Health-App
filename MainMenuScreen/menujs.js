@@ -1,3 +1,7 @@
+localStorage['facts'] = JSON.stringify(['Anxiety can make bad smells even worse.','Men are more forgetful than women.','Eating eggs improves your reflexes.','Your blood makes up nearly one-tenth of your total body weight.',
+                                        'A tick bite can make you allergic to red meat.','The scent of apples can ease claustrophobia.','Most of the fat you lose exits your body via your lungs.','Humans are the only animals with chins.']);
+
+
 var firstTime = sessionStorage.getItem("firsttime");
 
 if(!firstTime) {
