@@ -56,17 +56,24 @@ function saveForm() {
     var date = document.getElementById("date").value;
     var currweight = document.getElementById("currweight").value;
     var goalweight = document.getElementById("goalweight").value;
+    var heightft = document.getElementById("heightft").value;
+    var heightin = document.getElementById("heightin").value;
+    var heightinInches = Number(heightft*12)+Number(heightin);
+    var bmi = (((currweight)/(heightinInches**2)) * 703).toFixed(2);
+
 
     sessionStorage.setItem("hellomsg", "&nbsp Hello " + name + "!");
     sessionStorage.setItem("datemsg", "&nbsp Today's Date is: " + date);
     sessionStorage.setItem("currweightmsg", "&nbsp Your Current Weight is: " + currweight);
     sessionStorage.setItem("goalweightmsg", "&nbsp Your Desired Goal Weight is: " + goalweight);
+    sessionStorage.setItem("bmi", "&nbsp Your current BMI is: " + bmi);
 
     document.getElementById("tempmsg").innerHTML = ""; 
     document.getElementById("hellomsg").innerHTML = "&nbsp Hello " + name + "!"; 
     document.getElementById("datemsg").innerHTML = "&nbsp Today's Date is: " + date;
     document.getElementById("currweightmsg").innerHTML = "&nbsp Your Current Weight is: " + currweight;
     document.getElementById("goalweightmsg").innerHTML = "&nbsp Your Desired Goal Weight is: " + goalweight;
+    document.getElementById("bmi").innerHTML = "&nbsp Your current BMI is: " + bmi;
 
     document.getElementById("popupForm").style.display = "none";
 }
@@ -80,6 +87,7 @@ window.onload = function() {
     document.getElementById("datemsg").innerHTML = sessionStorage.getItem("datemsg");
     document.getElementById("currweightmsg").innerHTML = sessionStorage.getItem("currweightmsg");
     document.getElementById("goalweightmsg").innerHTML = sessionStorage.getItem("goalweightmsg");
+    document.getElementById("bmi").innerHTML = sessionStorage.getItem("bmi");
     document.getElementById("tempmsg").innerHTML = ""; 
   }
 }

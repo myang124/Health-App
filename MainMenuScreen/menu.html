@@ -13,6 +13,7 @@
             <p id="datemsg"> </p>
             <p id="currweightmsg"> </p>
             <p id="goalweightmsg"> </p>
+            <p id="bmi"> </p>
         </div>
         
         <div class="container">
@@ -38,8 +39,12 @@
                 <label id="currweightlabel"><b>Current Weight:</b></label>
                 <input type="number" placeholder="Enter Current Weight" id="currweight" min="0">
                 <br>
-                <label id="goalweightlabel"><b>Desired Weight:</b></label>
+                <label id="goalweightlabel"><b>Desired Weight: </b></label>
                 <input type="number" placeholder="Enter Desired Weight" id="goalweight" min="0">
+                <br>
+                <label id="height"><b>Height: </b></label>
+                <input id="heightft" type="number" step="1" placeholder="Feet" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="1">
+                <input id="heightin" type="number" step="1" placeholder="Inches" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="1">
                 <br>
                 <br>
                 <button id= "saveButton" type="button" class="savebtn" onclick="saveForm()">Save</button>
