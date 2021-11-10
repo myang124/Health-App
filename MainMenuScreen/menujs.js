@@ -2,25 +2,34 @@
 Facts Citations:
 1. https://www.businessinsider.com/scientific-reasons-to-eat-healthy-2016-7#of-course-eating-right-is-one-of-the-best-ways-to-maintain-a-healthy-weight-dont-forget-to-exercise-and-sleep-too-17
 2. https://blog.uvahealth.com/2019/01/08/15-fun-facts-exercise/
+https://www.thegoodbody.com/health-facts/
 */
 
-sessionStorage['facts'] = JSON.stringify(['Eating eggs improves your reflexes.',
+localStorage['facts'] = JSON.stringify(['Eating eggs improves your reflexes.',
 'The scent of apples can ease claustrophobia.',
-'Most of the fat you lose exits your body via your lungs.', "Eating right could reduce your risk for some cancers.", "A large study found unhealthy diets full of processed foods cost $1.50 more a day than healthy ones full of whole foods."
-, "Eating right could improve men's fertility", "Eating right could boost your energy and enhance your athletic performance.", "People who eat well tend to live longer, and they have fewer health complications so they enjoy the extra time.",
+'Most of the fat you lose exits your body via your lungs.', 'Eating right could reduce your risk for some cancers.', 'A large study found unhealthy diets full of processed foods cost $1.50 more a day than healthy ones full of whole foods.'
+, "Eating right could improve men's fertility", 'Eating right could boost your energy and enhance your athletic performance.', 'People who eat well tend to live longer, and they have fewer health complications so they enjoy the extra time.',
 "Studies have found people who follow healthy diets are less likely to develop dementia and Alzheimer's.", "A healthy diet could boost your immunity and help keep you from getting sick.",
 "People who don’t regularly exercise may lose up to 80% of their muscle strength by age 65.", "Regular exercise helps lower blood pressure and cholesterol levels", "Improve your mental health and mood with an exercise routine",
 "Exercise keeps your metabolism elevated even after your workout, and continues to burn more calories even at rest","You use 200 muscles to take a single step forward.", "The pressure on your feet is equal to about 3-4 times your body weight with each step while running",
 "Your heart is the hardest working muscle in your body. It beats approximately 100,000 times per day, pumping almost 2,000 gallons of blood.","During physical activity, you breathe more to keep oxygen levels in your blood at appropriate levels",
 "The knee is the largest and most complex joint in your body which makes it most likely to be injured", "Fat and muscle are completely different types of tissue. Muscle cannot turn into fat", "If you can’t speak a few words without taking a breath, you may be exercising too intensely",
 "Being dehydrated reduces exercise performance", "Opposite of people who cross-train, people who do the same daily type of exercise regularly are more prone to injury", "Studies indicate that children’s physical activity levels correlate closely with those of their parents",
-]);
+'Laughing is good for the heart and can increase blood flow by 20 percent.','Always look on the bright side: being an optimist can help you live longer. ','Exercise will give you more energy, even when you’re tired. ',' 39% of adults in the world are overweight.',
+'Smelling rosemary may increase alertness and improve memory','Swearing can make you feel better when you’re in pain. ','Writing in a journal can make you a happier person! ','Chewing gum makes you more alert, relieves stress and reduces anxiety levels.',
+'Yoga can boost your cognitive function and lower stress. ','Eating oatmeal provides a serotonin boost to calm the brain and improve your mood. ','Apples can reduce levels of bad cholesterol to keep your heart healthy.']);
 
 
 var facts = JSON.parse(localStorage['facts']);
 
-//display faily facts here.
+//display daily fact
+if(sessionStorage.getItem("firstday") == null){
+  
+  var rand = Math.floor(Math.random() * 35);
+  alert("Random daily health fact! \nDid you know: \n" + facts[rand]);
 
+  sessionStorage.setItem("firstday",1); 
+}
 
 var firstTime = sessionStorage.getItem("firsttime");
 
