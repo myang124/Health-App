@@ -3,25 +3,61 @@ body {
     margin-right: auto;
     align-items: center;
   }
-  #entirepage {
-      width:450px;
-      height: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      border: 7px solid black;
-      border-radius: 40px;
-      background-image: linear-gradient(#60ddf0, #60f0bb);
-      position: relative;
-    }
-  
-  .titleheading {
-      font-family: "Open Sans", sans-serif;
-      color: white;
-      text-align: center;
-      text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
-               #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
-      text-decoration: underline;
+#entirepage {
+    width:450px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid black;
+    border-radius: 40px;
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
+    position: relative;
   }
+  
+.titleheading {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+    text-decoration: underline;
+}
+
+.userinput {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userinput {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userinput fieldset {
+  border: 3px solid rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 15px;
+  padding-top: 20px;
+  width: 415px;
+  height: 150px;
+  color:white;
+  position: absolute;
+  bottom: 170px;
+  right: 0px;
+  font-size: 18px;
+  text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
+             #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
+}
+
+.userinput input{
+    width: 20%;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
 
   #button {
     width:200px;
@@ -153,7 +189,7 @@ body {
 .month {
   /*padding: 70px 25px;*/
   width: 100%;
-  background: #1abc9c;
+  background: #485057;
   text-align: center;
 }
 
@@ -216,6 +252,6 @@ body {
 /* Highlight the "current" day */
 .days li .active {
   padding: 5px;
-  background: #1abc9c;
+  background: #485057;
   color: white !important
 }
