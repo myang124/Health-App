@@ -26,7 +26,7 @@ var facts = JSON.parse(localStorage['facts']);
 if(sessionStorage.getItem("firstday") == null){
   
   var rand = Math.floor(Math.random() * 35);
-  alert("Random daily health fact! \nDid you know: \n" + facts[rand]);
+  alert("(TREAT THIS AS A PHONE NOTIFICATION)\nRandom Daily Health Fact! \nDid you know: \n" + facts[rand]);
 
   sessionStorage.setItem("firstday",1); 
 }
