@@ -1,10 +1,11 @@
 /*
-    Cynthia SHeng
+    Cynthia Sheng
 */
 
 function displayWeight() {
     var w = document.getElementById("weightStat");
     var wg = document.getElementById("weightGraph");
+    var wb = document.getElementsByClassName("bWeight")
     var c = document.getElementById("calorieStat");
     var cg = document.getElementById("calorieGraph");
     var m = document.getElementById("macroStat");
