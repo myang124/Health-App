@@ -320,3 +320,18 @@ ul li button{
                       #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     
   }
+
+  #back{
+    position: absolute;
+    left: 28%;
+    font-size: 25px;
+    color: white;
+    background-color: #6095f0;
+    margin: 4px;
+    z-index:10;
+    border-radius: 15px 15px;
+  }
+
+  #selected_val_my{
+      visibility: hidden;
+  }

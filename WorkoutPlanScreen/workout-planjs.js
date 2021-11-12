@@ -253,6 +253,7 @@ function changeInputText(id){
         temp = document.getElementsByClassName("workouts")[5];
         temp.value = document.getElementById("selected_val_my").value;
     }
+    temp.value = "1111";
 }
 
 //updates slect on text input
