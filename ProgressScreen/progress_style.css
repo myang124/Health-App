@@ -13,7 +13,7 @@ body {
     margin-right: auto;
     border: 7px solid black;
     border-radius: 40px;
-    background-color: #97A9B4;
+    background-image: linear-gradient(black, 0.5%,#97A9B4);
     position: relative;
   }
   .titleheading {
