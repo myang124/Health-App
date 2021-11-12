@@ -3,110 +3,118 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="utf-8">
-    <title>Caloric Calculator</title>
+    <title>Health</title>
     <link rel="stylesheet" type="text/css" href="health.css" />
-</head>
-<body>
+
+  </head>
+
+  <body>
     <div id="entirepage">
-        <div class="titleheading">
-            <h1>Health</h1>
-        </div>
-    
-    <div class="container">
-      <div class="calendar">
-        <div class="month">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1></h1>
-            <p></p>
+      <div class="titleheading">
+        <h1>Health</h1>
+      </div>
+
+      <div class="container">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
           </div>
-          <i class="fas fa-angle-right next"></i>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
         </div>
-        <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
+      </div>
+
+      <script src="health.js"></script>
+
+      <div class="userinput">
+        <form>
+          <fieldset>
+            <legend>Stats</legend>
+
+
+            <label>*Sugar Level: </label>
+            <input id="userinput" type="number" step="1" placeholder="Ex: 110" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+
+            <div class="calorielabel">
+              <label>*Heart Rate: </label>
+              <input id="calorielabel" type="number" step="1" placeholder="Ex: 85" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+            </div>
+
+            <div class="servinglabel">
+
+              <label>*Blood Pressure: </label>
+              <input id="servinglabel" type="number" step="0.5" placeholder="Ex: 120" onkeyup="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" min="1">
+
+            </div>
+          </fieldset>
+        </form>
+        <br>
+        <form>
+          <fieldset>
+            <legend>Fitness</legend>
+
+
+            <label>*Lower Body Exercises: </label>
+            <input id="userinput1" type="number" step="1" placeholder="Ex: 1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+
+            <div class="calorielabel">
+              <label>*Upper Body Exercises: </label>
+              <input id="calorielabel1" type="number" step="1" placeholder="Ex: 3" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+            </div>
+
+            <div class="servinglabel">
+
+              <label>*Cardio Exercises: </label>
+              <input id="servinglabel1" type="number" step="0.5" placeholder="Ex: 1" onkeyup="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" min="1">
+
+            </div>
+          </fieldset>
+        </form>
+        <br>
+        <form>
+          <fieldset>
+            <legend>Caloric</legend>
+
+
+            <label>*Total Intake: </label>
+            <input id="userinput2" type="number" step="1" placeholder="Ex: 3000" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+
+            <div class="calorielabel">
+              <label>*Daily Goal: </label>
+              <input id="calorielabel2" type="number" step="1" placeholder="Ex: 2500" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
+            </div>
+
+            <label>*Additional Notes: </label>
+            <input id="foodlabel" type="text" placeholder="Ex: Apple">
+          </fieldset>
+        </form>
+
+
+        <div class="navbar">
+          <a href="../MainMenuScreen/menu.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
+          <a href="../WorkoutPlanScreen/workout-plan.html" style="text-decoration:none">&#9741;<br>Workout Plan</a>
+          <a href="../ProgressScreen/progress.html" style="text-decoration:none">&#9745;<br>Progress</a>
+          <a class="lastitem" href="../HealthScreen/health.html" style="text-decoration:none">&#10010;<br>Health</a>
         </div>
-        <div class="days"></div>
       </div>
     </div>
-
-    <script src="health.js"></script>
-
-        <div class="userinput">  
-            <form>
-                <fieldset>
-                 <legend>Food Information</legend>
-
-                
-                 <label>*Food Name: </label>
-                 <input id="foodlabel" type="text" placeholder="Ex: Apple" onkeypress="return /[a-z]/i.test(event.key)">
-                
-
-                 <div class="calorielabel">
-                    <label>*Calories: </label>
-                    <input id="calorielabel" type="number" step="10" placeholder="Ex: 80" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                 </div>
-
-                 <div class="servinglabel">
-                    <br>
-                    <label>*Servings/Quantity: </label>
-                    <input id="servinglabel" type="number" step="0.5" placeholder="1" onkeyup="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" min="1">
-                    
-                 </div>
-
-                 <br>
-                 <label>Optional: </label>
-
-                 <div class="nutrition">
-                     <label>Proteins: </label>
-                     <input id="proteinlabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                     <label>&nbsp Carbohydrates:</label>
-                     <input id="carblabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                     <label>&nbsp Fats: </label>
-                     <input id="fatslabel" type="number" step="1" placeholder="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')" min="0">
-                 </div>
-                </fieldset>
-            </form>
-
-            <div class="addbutton">
-                <button id="button">ADD TO LIST</button>  
-            </div>
-            
-            <!-- COMMENTED OUT OLD NAV BAR
-            <div class="homeicon">
-                   <button class="homebutton"><span style='font-size:40px;'>&#9776;</span></i></button>
-                   <div class="dropdown-content"> 
-                        <a href="../MainMenuScreen/menu.html" style="text-decoration:none">Main Menu</a>
-                        <a href="../WorkoutPlanScreen/workout-plan.html" style="text-decoration:none">Workout Plan</a>
-                        <a href="../ProgressScreen/progress.html" style="text-decoration:none">Progress</a>
-                        <a href="../HealthScreen/health.html" style="text-decoration:none">Health</a>
-                   </div>
-            </div>
-            -->
-
-            <div class="resetbutton">
-                <button id="reset">RESET LIST</button>
-            </div>
-
-            <div class="totallabel">
-                <p id="total">&nbsp TOTAL CALORIES: 0</p>
-            </div>
-
-            <div class="navbar">
-                <a href="../index.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
-                <a href="../WorkoutPlanScreen/workout-plan.html" style="text-decoration:none">&#9741;<br>Workout Plan</a>
-                <a href="../ProgressScreen/progress.html" style="text-decoration:none">&#9745;<br>Progress</a>
-                <a href="../HealthScreen/health.html" style="text-decoration:none">&#10010;<br>Health</a>
-            </div>
-        </div>
-    </div>
     <script src="caloric-calculator_script.js"></script>
-</body>
+  </body>
+
 </html>
