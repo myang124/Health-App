@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <script src = "myWorkoutjs.js"></script>
         <link rel = "stylesheet" href = "myWorkoutscss.css">
     </head>
     <body>
+        
     <div id = "entirepage">
+        <a href = "/WorkoutPlanScreen/workout-plan.html">
+            <button id = back>BACK</button>
+        </a>
+        
         <section id = "task-number">
-            
+
         </section>
         <ul id="checklist">
-
+            <br>
         </ul>
             
         <button onclick = "removeChecked()" id = "complete_button">Complete</button>
@@ -35,8 +41,8 @@
             remain.textContent = "You have " + myList.length + " workouts left!";
         </script>
         <div class="navbar">
-            <a href="../MainMenuScreen/menu.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
-            <a href="../CaloricCalculatorScreen/caloric-calculator_page.html" style="text-decoration:none">&#9741;<br>Calorie Calc</a>
+            <a href="../index.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
+            <a href="../CaloricCalculatorScreen/caloric-calculator_page.html" style="text-decoration:none">&#9878;<br>Calorie Calc</a>
             <a href="../ProgressScreen/progress.html" style="text-decoration:none">&#9745;<br>Progress</a>
             <a href="../HealthScreen/health.html" style="text-decoration:none">&#10010;<br>Health</a>
         </div>

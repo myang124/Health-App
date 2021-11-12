@@ -11,6 +11,9 @@
         <!--*********************************-->
         <!--Breaks the body parts in sections-->
         <!--*********************************-->
+        <a href = "/WorkoutPlanScreen/workout-plan.html">
+            <button id = "back">BACK</button>
+        </a>
         <h1 style = "text-align: center;">Select Body Part to Workout</h1>
         <div class = "workout_buttons">
             <a href = "#upper_body">
@@ -46,50 +49,57 @@
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
 
-            <input oninput="changeSelectText(this.id)" list = "upper_body_workouts" class = "workouts" id = "workoutUP" name = "ubw" value ="Pushup"/>
+            <input oninput="changeSelectText(this.id)" list = "upper_body_workouts" class = "workouts" id = "workoutUP" name = "ubw" />
 
             <datalist id = "upper_body_workouts">
-                <select id = "selected_val_up"> 
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pushup">Pushup - Get on all fours. lower body until chest is close to floor. push up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bench press">Bench press - Grip the bar with hands just wider than shoulder. Bring the bar down to your chest. Push up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Overhead press">Overhead press - grip bar shoulder width. start with bar at chest. push up above head.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Incline bench press">Incline bench press - lie back and place hands on bar. push bar up until arms are extended. lower bar to chest.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover row">Bentover row - lean foward with bar in hands. pull elbows behind you. pause. lower agian.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pullup">Pullup - place hands on overhead grip. pull up. slowly lower body.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell curl">Dumbbell curl - hold dumbell in each hand by your sides. bend elbow so hand approach shoulders.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Hammer curl">Hammer curl - hold dumbell in each hand by your sides. bend elbow so dumbell approach shoulders.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Triceps pushdown">Triceps pushdown - grab cable and push down until elbows are extended.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lying triceps extension">Lying triceps extension - lie down with bar in hand. bend elbows and lower bar. pause. push elbows up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lateral raise">Lateral raise - hold dumbells by side. keep arms straight and raise until ares are horizontal.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover lateral raise">Bentover lateral raise - bend over with back straight. hold dumbells down and keep arms straight and raise until ares are horizontal.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Face pull">Face pull - grab double rope at chest level and pull back with arms pareallel to the floor</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Shrug">Shrug - hold weight by your side and move should up and down.</option>
+                <select id = "selected_val_up" style = "visibility: hidden;"> 
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Barbell Bench Press">Barbell Bench Press - Grip the Barbell with hands just wider than shoulder. Bring the bar down to your chest. Push up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lat-pulldowns">Lat-pulldowns - grab bar. should width apart and pull down with back straight. then slowly allow bar to go back up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Seated Dumbbell Press">Seated Dumbbell Press - sit down and grab Dumbbell shoulder width apart. start with Dumbbell at chest level. push up above head.</option>
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Barbell Bicep Curls">Barbell Bicep Curls - hold dumbell by side, then bring dumbell to chest. then lower dumbell agian.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Triceps Rope Pushdowns">Triceps Rope Pushdowns - start with rope by chest. grip rope and push down with triceps. then slowly move back up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Overhead Bar Extensions">Overhead Bar Extensions - start with bar above head. bend elbows and lower bar. pause. push elbows up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "EZ Bar Curls">EZ Bar Curls - hold bar by side with arms extended. then move bar back up to shoulders.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Machine Chest Press">Machine Chest Press - place hands on the grips and push out.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "T-Bar Row">T-Bar Row - have bar under legs and hold on end of bar. keep back straight and lower then bring back up to chest.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "EZ Bar Upright Rows">EZ Bar Upright Rows - hold bar down and use should to bring it back up.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Cable Fly">Cable Fly - back each hand on a cable and being down to chest.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Skullcrushers">Skullcrushers - lie down with bar behind head. then raise bar up until arms fully extended</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Chest Dip">Chest Dip - hold handles on your side and slowly lower body until tricps are pareallel to ground</option>
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Barbell Front Raise">Barbell Front Raise - hold bar down with arm shoulder width apart and then move bar in front of you.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell Lateral Raise">Dumbbell Lateral Raise - hold dumbells by side and raise until arms are parallel to floor.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Wide Grip Pull Up">Wide Grip Pull Up - hold bar with arms on bar and pull body up and then slowly lower.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Machine Reverse Fly">Machine Reverse Fly - push arms in front of you and grab the handle and move arms back until arms are extended out.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Upright Row">Upright Row - hold bar down with knuckles facing out then bring bar up to shoulders.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell Flys">Dumbbell Flys - lie down on bench with elbows bent at 45 degrees, then move arms up until dumbells touch.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Cable Crossovers">Cable Crossovers - grab cables on each hand and move hands in until hands touch each other</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Close Grip Bench Press">Close Grip Bench Press - lie on bench and hold bar with hands close to each other. then push up and slowly lower back down to chest.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bench press">Bench press - Grip the bar with hands just wider than shoulder. Bring the bar down to your chest. Push up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover row">Bentover row - lean foward with bar in hands. pull elbows behind you. pause. lower agian.</option>
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Bent Over Barbell Row">Bent Over Barbell Row - hold bar down and with back bent at and angle and pull elbow behind you.</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Smith Machine Upright Row">Smith Machine Upright Row - start with bar at waisnt level and then hold bar with hands close and pull up to shoulders.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Bentover lateral raise">Bentover lateral raise - bend over with back straight. hold dumbells down and keep arms straight and raise until ares are horizontal.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Cable Crossovers">Cable Crossovers - grab cables on each hand and move hands in until hands touch each other</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Cable Fly">Cable Fly - back each hand on a cable and being down to chest.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Chest Dip">Chest Dip - hold handles on your side and slowly lower body until tricps are pareallel to ground</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Close Grip Bench Press">Close Grip Bench Press - lie on bench and hold bar with hands close to each other. then push up and slowly lower back down to chest.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell curl">Dumbbell curl - hold dumbell in each hand by your sides. bend elbow so hand approach shoulders.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell Lateral Raise">Dumbbell Lateral Raise - hold dumbells by side and raise until arms are parallel to floor.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Dumbbell Flys">Dumbbell Flys - lie down on bench with elbows bent at 45 degrees, then move arms up until dumbells touch.</option>
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Dips">Dips - hold handles on your side and slowly lower body until tricps are pareallel to ground</option>
-                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pullups">Pullups - hold grips and pull body up then slowly lower.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "EZ Bar Upright Rows">EZ Bar Upright Rows - hold bar down and use should to bring it back up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "EZ Bar Curls">EZ Bar Curls - hold bar by side with arms extended. then move bar back up to shoulders.</option>
+
+                    
+                   
+                    
+                    
+
+                    
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Face pull">Face pull - grab double rope at chest level and pull back with arms pareallel to the floor</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Hammer curl">Hammer curl - hold dumbell in each hand by your sides. bend elbow so dumbell approach shoulders.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Incline bench press">Incline bench press - lie back and place hands on bar. push bar up until arms are extended. lower bar to chest.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lateral raise">Lateral raise - hold dumbells by side. keep arms straight and raise until ares are horizontal.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lat-pulldowns">Lat-pulldowns - grab bar. should width apart and pull down with back straight. then slowly allow bar to go back up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Lying triceps extension">Lying triceps extension - lie down with bar in hand. bend elbows and lower bar. pause. push elbows up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Machine Chest Press">Machine Chest Press - place hands on the grips and push out.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Machine Reverse Fly">Machine Reverse Fly - push arms in front of you and grab the handle and move arms back until arms are extended out.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Overhead Bar Extensions">Overhead Bar Extensions - start with bar above head. bend elbows and lower bar. pause. push elbows up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Overhead press">Overhead press - grip bar shoulder width. start with bar at chest. push up above head.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pushup">Pushup - Get on all fours. lower body until chest is close to floor. push up.</option>
                     <option id = "upper" onclick="changeInputText(this.id)" value = "Pulldowns">Pulldowns - grab bar. should width apart and pull down with back straight. then slowly allow bar to go back up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Pullup">Pullup - place hands on overhead grip. pull up. slowly lower body.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Seated Dumbbell Press">Seated Dumbbell Press - sit down and grab Dumbbell shoulder width apart. start with Dumbbell at chest level. push up above head.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Shrug">Shrug - hold weight by your side and move should up and down.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Skullcrushers">Skullcrushers - lie down with bar behind head. then raise bar up until arms fully extended</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Smith Machine Upright Row">Smith Machine Upright Row - start with bar at waisnt level and then hold bar with hands close and pull up to shoulders.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Triceps Rope Pushdowns">Triceps Rope Pushdowns - start with rope by chest. grip rope and push down with triceps. then slowly move back up.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Triceps pushdown">Triceps pushdown - grab cable and push down until elbows are extended.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "T-Bar Row">T-Bar Row - have bar under legs and hold on end of bar. keep back straight and lower then bring back up to chest.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Upright Row">Upright Row - hold bar down with knuckles facing out then bring bar up to shoulders.</option>
+                    <option id = "upper" onclick="changeInputText(this.id)" value = "Wide Grip Pull Up">Wide Grip Pull Up - hold bar with arms on bar and pull body up and then slowly lower.</option>
+                    
                 </select>
             </datalist>
         </section>
@@ -105,23 +115,30 @@
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
 
-            <input oninput="changeSelectText(this.id)" class = "workouts" list = "lower_body_workouts" id = "workoutLO" name = "lbw" value ="Dumbbell squat"/>
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "lower_body_workouts" id = "workoutLO" name = "lbw"/>
 
             <datalist id = "lower_body_workouts">
-                <select id = "selected_val_lo">
+                <select id = "selected_val_lo" style = "visibility: hidden;">
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Bulgarian split squat">Bulgarian split squat - go 2 feet in front of bench with one leg rested on it. squat </option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Calf raises">Calf raises - stand up and push up with toes.</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Dead lifts">Dead lifts </option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Dumbbell squat">Dumbbell squat - move butt back by bending knees. pause. press heels to straighten kness.</option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Dumbbell goblet squat">Dumbbell goblet squat - vertically hold dumbell with both hands. squat. then go back up.</option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Bulgarian split squat">Bulgarian split squat - go 2 feet in front of bench with one leg rested on it. squat </option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "side lunge">side lunge - stand up and take wide step left/right. push up with opposite leg to return to standing pos.</option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Glute bridge">Glute bridge - lie on floor with knees bent and feet flat on floor. lift hips off ground. pause.</option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Forward lunge">Forward lunge - first stand tall. then step forward with one foot untill knee is at 90 degrees. then push back to standing.</option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Step-ups">Step-ups - stand tall and place left/right foot on bench. then push up with that leg. pause. go back down. </option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Glute bridge">Glute bridge - lie on floor with knees bent and feet flat on floor. lift hips off ground. pause.</option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Jumping jacks">Jumping jacks</option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Dead lifts">Dead lifts </option>
-                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Calf raises">Calf raises - stand up and push up with toes.</option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Leg Extensions">Leg Extensions - place legs under pad and extend legs.</option>
+
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "side lunge">side lunge - stand up and take wide step left/right. push up with opposite leg to return to standing pos.</option>
+                    
+                    
+                    
+                    
+                    
+                    
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Squat">Squat</option>
                     <option  id = "lower" onclick="changeInputText(this.id)" value = "Standing Calf Raise">Standing Calf Raise - stand up and push up with toes.</option>
+                    <option  id = "lower" onclick="changeInputText(this.id)" value = "Step-ups">Step-ups - stand tall and place left/right foot on bench. then push up with that leg. pause. go back down. </option>
                 </select>
             </datalist>
         </section>
@@ -135,19 +152,19 @@
                <button id = "add_txt" onclick="addWorkout()">ADD</button>
            </div>
 
-            <input oninput="changeSelectText(this.id)" class = "workouts" list = "core_workouts" id = "workoutCO" name = "cw" value = "Forearm Plank"/>
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "core_workouts" id = "workoutCO" name = "cw"/>
 
             <datalist id = "core_workouts">
-                <select id = "selected_val_co">
-                    <option  id = "c" onclick="changeInputText(this.id)" value = "Forearm Plank">Forearm Plank - get in push up position but with both elbows and hands on floor.</option>
-                    <option  id = "c" onclick="changeInputText(this.id)" value = "Russian Twist">Russian Twist - sit down with legs off the floor. twist to right and left.</option>
+                <select id = "selected_val_co" style = "visibility: hidden;">
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Bicycle Crunch">Bicycle Crunch - lie down with both arms behind head. then move left knee in, right need out. then vice versa. repeat.</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Core Roll-Up">Core Roll-Up - lie on back with legs straight. lift arms up to ceiling.</option>
                     <option  id = "c" onclick="changeInputText(this.id)" value = "High Boat to Low Boat">High Boat to Low Boat - sit down with legs out and then try to raise leg and arms at same time. </option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Forearm Plank">Forearm Plank - get in push up position but with both elbows and hands on floor.</option>
                     <option  id = "c" onclick="changeInputText(this.id)" value = "Forearm Plank Rock">Forearm Plank Rock - get in pushup position with elbows on floor. then move body forward and backward with toes.</option>
-                    <option  id = "c" onclick="changeInputText(this.id)" value = "Side Bend">Side Bend - in a standing position, bend left and right.</option>
                     <option  id = "c" onclick="changeInputText(this.id)" value = "Jackknife">Jackknife - lie down legs bent and arms straight. the reach forward with arms still straight.</option>
                     <option  id = "c" onclick="changeInputText(this.id)" value = "Leg Raise">Leg Raise - lie down flat on floor and lift legs until they are vertical.</option>
-                    <option  id = "c" onclick="changeInputText(this.id)" value = "Core Roll-Up">Core Roll-Up - lie on back with legs straight. lift arms up to ceiling.</option>
-                    <option  id = "c" onclick="changeInputText(this.id)" value = "Bicycle Crunch">Bicycle Crunch - lie down with both arms behind head. then move left knee in, right need out. then vice versa. repeat.</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Russian Twist">Russian Twist - sit down with legs off the floor. twist to right and left.</option>
+                    <option  id = "c" onclick="changeInputText(this.id)" value = "Side Bend">Side Bend - in a standing position, bend left and right.</option>
                 </select>
             </datalist>
         </section>
@@ -161,21 +178,25 @@
                 <button id = "add_txt" onclick="addWorkout()">ADD</button>
             </div>
 
-            <input oninput="changeSelectText(this.id)" class = "workouts" list = "cardio_workouts" id = "workoutCA" name = "caw" value = "Jump rope"/>
+            <input oninput="changeSelectText(this.id)" class = "workouts" list = "cardio_workouts" id = "workoutCA" name = "caw"/>
 
             <datalist id = "cardio_workouts">
-                <select id = "selected_val_ca">
+                <select id = "selected_val_ca" style = "visibility: hidden;">
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Burpees">Burpees - in standing position get down and do a push up, then get up and do a jumping jack.</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Elliptical">Elliptical</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Exercise bike">Exercise bike</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "High intensity interval training (HIIT)">High intensity interval training (HIIT)</option>
                     <option id = "ca" onclick="changeInputText(this.id)" value = "Jump rope">Jump rope</option>
                     <option id = "ca" onclick="changeInputText(this.id)" value = "Jumping jacks">Jumping jacks</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Burpees">Burpees - in standing position get down and do a push up, then get up and do a jumping jack.</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Squat jumps">Squat jumps - get into squat position and jump</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "High intensity interval training (HIIT)">High intensity interval training (HIIT)</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Elliptical">Elliptical</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Stair climber">Stair climber</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Exercise bike">Exercise bike</option>
-                    <option id = "ca" onclick="changeInputText(this.id)" value = "Treadmill">Treadmill</option>
                     <option id = "ca" onclick="changeInputText(this.id)" value = "Rowing machine">Rowing machine</option>
+
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Squat jumps">Squat jumps - get into squat position and jump</option>
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Stair climber">Stair climber</option>
                     <option id = "ca" onclick="changeInputText(this.id)" value = "Swimming">Swimming</option>
+                
+                    
+                    
+                    <option id = "ca" onclick="changeInputText(this.id)" value = "Treadmill">Treadmill</option>
                 </select>
             </datalist>
         </section>
@@ -206,7 +227,7 @@
             </div>
         </section>
         <div class="navbar" id = "navtemp">
-            <a href="../MainMenuScreen/menu.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
+            <a href="../index.html" style="text-decoration:none">&#9776;<br>Main Menu</a>
             <a href="../CaloricCalculatorScreen/caloric-calculator_page.html" style="text-decoration:none">&#9741;<br>Calorie</a>
             <a href="../ProgressScreen/progress.html" style="text-decoration:none">&#9745;<br>Progress</a>
             <a href="../HealthScreen/health.html" style="text-decoration:none">&#10010;<br>Health</a>

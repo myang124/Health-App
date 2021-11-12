@@ -106,7 +106,7 @@ input{
     float: left;
     color: white;
     text-align: center;
-    padding: 3px 20.7px;
+    padding: 3px 21.5px;
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
@@ -319,4 +319,19 @@ ul li button{
     text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
                       #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
     
+  }
+
+  #back{
+    position: absolute;
+    left: 28%;
+    font-size: 25px;
+    color: white;
+    background-color: #6095f0;
+    margin: 4px;
+    z-index:10;
+    border-radius: 15px 15px;
+  }
+
+  #selected_val_my{
+      visibility: hidden;
   }

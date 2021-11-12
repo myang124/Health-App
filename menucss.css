@@ -13,6 +13,19 @@
     margin-bottom: 30px;
     box-shadow: 1px 1.5px black;
 }
+
+#heightft {
+  position: absolute;
+  width:100px;
+  right: 255px;
+  
+}
+#heightin {
+  position: absolute;
+  width:100px;
+  right:130px;
+}
+
 .container {
     align-items: center;
     border-radius: 15px;
@@ -78,13 +91,15 @@
     border: 3px solid black;
     border-radius: 15px;
     width: 430px;
-    height: 200px;
+    height: 210px;
     position: absolute;
     background-color: #485057;
     top: 20px;
     right: 7px;
 }
-
+.profile p{
+  margin-bottom: -5px;
+}
 .popup {
     position: absolute;
     top: 30px;
